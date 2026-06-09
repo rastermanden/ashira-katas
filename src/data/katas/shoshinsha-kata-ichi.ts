@@ -14,7 +14,10 @@ export const shoshinshaKataIchi: Kata = {
     da: 'Shoshinsha no Kata er Ashihara Karates begynder-soloformer, der udføres alene mod en forestillet modstander. Denne første form lærer de grundlæggende blok-og-kontra sabaki-sekvenser og kombinerer trinundvigelser med blokke, stød og cirkelspark. Den bygger det fundament af timing og afstand, som de senere begynderformer videreudvikler.',
     ja: '初心者の型はアシハラ空手の初心者用の単独形で、想定した相手に対して一人で行います。この最初の型は基本的な受けと反撃の捌きの連続を教え、踏み込みの回避と受け、突き、回し蹴りを組み合わせます。後の初心者形が発展させるタイミングと間合いの基礎を築きます。',
   },
-  youtubeLinks: [],
+  youtubeLinks: [
+    { label: 'Shoshinsha no Kata Sono Ichi — Sensei Mazz', url: 'https://youtu.be/npTj8t4i8wU' },
+    { label: 'Shoshinsha no Kata Sono Ichi (attacker) — Sensei Mazz', url: 'https://youtu.be/FI3STJZynlU' },
+  ],
   steps: [
     {
       stepNumber: 1,

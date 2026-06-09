@@ -14,7 +14,7 @@ export const nageKataNi: Kata = {
     da: 'Nage no Kata er kasteformerne i Ashihara Karate — hver blok-og-clinch-sekvens ender i et kast. Sono Ichi og Sono Ni opbygger kernekastene (maki-komi-nage, ura-nage, kubi-nage); Sono San og Sono Yon tilføjer knæstød, nedtagninger (hikitaoshi) og længere kombinationer. Sono Ni føjer knæstød (hiza-geri) ind i de grundlæggende kast mod en forestillet modstander.',
     ja: '投げの型はアシハラ空手の投げ技の型であり、受けとクリンチの各連続技は投げで終わります。其の一と其の二は基本の投げ技（巻き込み投げ、裏投げ、首投げ）を構築し、其の三と其の四は膝蹴り、引き倒し、より長い連続技を加えます。其の二は想定した相手に対する基礎的な投げ技に膝蹴り（膝蹴り）を重ねます。',
   },
-  youtubeLinks: [],
+  youtubeLinks: [{ label: 'Nage no Kata Sono Ni — Sensei Mazz', url: 'https://youtu.be/IsXkA9xL5RQ' }],
   steps: [
     {
       stepNumber: 1,

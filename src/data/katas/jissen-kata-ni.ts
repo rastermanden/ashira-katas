@@ -14,7 +14,7 @@ export const jissenKataNi: Kata = {
     da: 'Jissen no Kata — Sono Ni er den anden kampform ("rigtig kamp") i Ashihara Karate, udført solo mod en forestillet modstander, og er formelt et krav på 1. dan (shodan) niveau. Med udgangspunkt i den første jissen-form tilføjer den trekantspark (sankaku-geri) og nedtagninger sammen med sine nærkamps-blokeringer, bokseslag og kontringer. Formen afsluttes med et stød og et nedadgående albuestød, før den vender tilbage til kampstillingen.',
     ja: '実戦の型 二はアシハラ空手の二番目の実戦（「本当の戦い」）の型であり、想定した相手に対して単独で行います。正式には初段（shodan）相当の要件です。最初の実戦の型を基礎に、近接の受け、ボクシングの打撃、反撃に加えて、三角蹴り（sankaku-geri）と倒し技を加えています。最後は突きと下ろし肘打ちで締めくくり、組手の構えへ戻ります。',
   },
-  youtubeLinks: [],
+  youtubeLinks: [{ label: 'Jissen no Kata Sono Ni — Sensei Mazz', url: 'https://youtu.be/4eInvivg6aA' }],
   steps: [
     {
       stepNumber: 1,

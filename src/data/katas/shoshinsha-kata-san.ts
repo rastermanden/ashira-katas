@@ -14,7 +14,7 @@ export const shoshinshaKataSan: Kata = {
     da: 'Shoshinsha no Kata er Ashihara Karates begynder-soloformer, der udføres alene mod en forestillet modstander. Denne tredje form lærer de grundlæggende blok-og-kontra sabaki-sekvenser og lægger vægt på spark-mod-spark-udvekslinger med ledspark, indvendige lårspark, drejende cirkelspark og et afsluttende kast. Den fuldender det fundament af timing og afstand, der bygges gennem begynderformerne.',
     ja: '初心者の型はアシハラ空手の初心者用の単独形で、想定した相手に対して一人で行います。この三番目の型は基本的な受けと反撃の捌きの連続を教え、関節蹴り、内股蹴り、後ろ回し蹴り、締めの投げを用いた蹴り対蹴りのやり取りを重視します。初心者形を通じて築いたタイミングと間合いの基礎を仕上げます。',
   },
-  youtubeLinks: [],
+  youtubeLinks: [{ label: 'Shoshinsha no Kata Sono San — Sensei Mazz', url: 'https://youtu.be/JP_IZh-_9jM' }],
   steps: [
     {
       stepNumber: 1,
