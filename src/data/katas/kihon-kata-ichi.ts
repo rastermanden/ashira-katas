@@ -9,7 +9,6 @@ export const kihonKataIchi: Kata = {
     da: 'Grundform 1',
     ja: '基本形一',
   },
-  requiredForKyu: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
   description: {
     en: 'Kihon Kata Ichi is the foundational kata of Ashihara Karate. It introduces the core principles of movement, distance control (maai), and the circular evasion philosophy that defines Ashihara style. This kata establishes the attacker-defender relationship that runs through all Ashihara kata.',
     da: 'Kihon Kata Ichi er den grundlæggende kata i Ashihara Karate. Den introducerer kerneprincipperne for bevægelse, afstandskontrol (maai) og den cirkulære undvigelsesstrategi, som definerer Ashihara-stilen. Denne kata etablerer det angriber-forsvarer-forhold, der gennemgår alle Ashihara kata.',

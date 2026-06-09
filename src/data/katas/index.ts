@@ -1,4 +1,5 @@
 import type { Kata } from '../types';
+import { getRequiredKataIds } from '../requirements';
 import { kihonKataIchi } from './kihon-kata-ichi';
 import { kihonKataNi } from './kihon-kata-ni';
 import { kihonKataSan } from './kihon-kata-san';
@@ -13,7 +14,6 @@ export const allKatas: Kata[] = [
     japaneseCharacters: '形一',
     romaji: 'Kata Ichi',
     name: { en: 'Kata 1', da: 'Kata 1', ja: '形一' },
-    requiredForKyu: [7, 6, 5, 4, 3, 2, 1],
     description: {
       en: 'Content coming soon. This kata is required from 7th kyu onwards.',
       da: 'Indhold kommer snart. Denne kata kræves fra 7. kyu og frem.',
@@ -27,7 +27,6 @@ export const allKatas: Kata[] = [
     japaneseCharacters: '形二',
     romaji: 'Kata Ni',
     name: { en: 'Kata 2', da: 'Kata 2', ja: '形二' },
-    requiredForKyu: [6, 5, 4, 3, 2, 1],
     description: {
       en: 'Content coming soon. This kata is required from 6th kyu onwards.',
       da: 'Indhold kommer snart. Denne kata kræves fra 6. kyu og frem.',
@@ -41,7 +40,6 @@ export const allKatas: Kata[] = [
     japaneseCharacters: '形三',
     romaji: 'Kata San',
     name: { en: 'Kata 3', da: 'Kata 3', ja: '形三' },
-    requiredForKyu: [5, 4, 3, 2, 1],
     description: {
       en: 'Content coming soon. This kata is required from 5th kyu onwards.',
       da: 'Indhold kommer snart. Denne kata kræves fra 5. kyu og frem.',
@@ -55,7 +53,6 @@ export const allKatas: Kata[] = [
     japaneseCharacters: '形四',
     romaji: 'Kata Shi',
     name: { en: 'Kata 4', da: 'Kata 4', ja: '形四' },
-    requiredForKyu: [4, 3, 2, 1],
     description: {
       en: 'Content coming soon. This kata is required from 4th kyu onwards.',
       da: 'Indhold kommer snart. Denne kata kræves fra 4. kyu og frem.',
@@ -69,7 +66,6 @@ export const allKatas: Kata[] = [
     japaneseCharacters: '形五',
     romaji: 'Kata Go',
     name: { en: 'Kata 5', da: 'Kata 5', ja: '形五' },
-    requiredForKyu: [3, 2, 1],
     description: {
       en: 'Content coming soon. This kata is required from 3rd kyu onwards.',
       da: 'Indhold kommer snart. Denne kata kræves fra 3. kyu og frem.',
@@ -83,7 +79,6 @@ export const allKatas: Kata[] = [
     japaneseCharacters: '形六',
     romaji: 'Kata Roku',
     name: { en: 'Kata 6', da: 'Kata 6', ja: '形六' },
-    requiredForKyu: [2, 1],
     description: {
       en: 'Content coming soon. This kata is required from 2nd kyu onwards.',
       da: 'Indhold kommer snart. Denne kata kræves fra 2. kyu og frem.',
@@ -97,7 +92,6 @@ export const allKatas: Kata[] = [
     japaneseCharacters: '形七',
     romaji: 'Kata Shichi',
     name: { en: 'Kata 7', da: 'Kata 7', ja: '形七' },
-    requiredForKyu: [1],
     description: {
       en: 'Content coming soon. This kata is required from 1st kyu onwards.',
       da: 'Indhold kommer snart. Denne kata kræves fra 1. kyu og frem.',
@@ -113,5 +107,7 @@ export function getKataById(id: string): Kata | undefined {
 }
 
 export function getKatasForKyu(kyuLevel: number): Kata[] {
-  return allKatas.filter((k) => k.requiredForKyu.includes(kyuLevel));
+  return getRequiredKataIds(kyuLevel)
+    .map((id) => getKataById(id))
+    .filter((k): k is Kata => k !== undefined);
 }

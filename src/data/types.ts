@@ -22,7 +22,6 @@ export interface Kata {
   name: LocalizedString;
   japaneseCharacters: string;
   romaji: string;
-  requiredForKyu: number[];
   description: LocalizedString;
   youtubeLinks: { label: string; url: string }[];
   steps: KataStep[];
@@ -35,5 +34,4 @@ export interface KyuLevel {
   beltTailwindColor: string;
   beltTextColor: string;
   name: LocalizedString;
-  requiredKataIds: string[];
 }
