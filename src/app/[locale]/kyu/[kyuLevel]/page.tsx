@@ -5,6 +5,7 @@ import { getKyuByLevel, kyuLevels } from '@/data/kyu';
 import { getKatasForKyu } from '@/data/katas';
 import type { Locale } from '@/data/types';
 import { routing } from '@/i18n/routing';
+import { getBeltStyle } from '@/lib/belt';
 
 export function generateStaticParams() {
   const params = [];
@@ -43,7 +44,7 @@ export default async function KyuPage({
 
       {/* Header */}
       <div className="flex items-center gap-4 mb-8">
-        <div className={`h-10 w-4 rounded-sm ${kyu.beltTailwindColor} shadow-md flex-shrink-0`} />
+        <div className="h-10 w-4 rounded-sm shadow-md flex-shrink-0" style={getBeltStyle(kyu)} />
         <div>
           <h1 className="text-2xl font-bold text-gray-900 japanese-text">{kyu.name[l]}</h1>
           <p className="text-sm text-gray-500">{kyu.japaneseNumeral}</p>

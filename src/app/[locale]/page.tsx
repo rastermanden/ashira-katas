@@ -4,6 +4,7 @@ import { kyuLevels } from '@/data/kyu';
 import { allKatas } from '@/data/katas';
 import type { Locale } from '@/data/types';
 import { routing } from '@/i18n/routing';
+import { getBeltStyle } from '@/lib/belt';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -20,18 +21,6 @@ function buildPensumTable() {
     .sort((a, b) => b.firstKyu - a.firstKyu); // 10 → 9 → … → 1
 }
 
-const beltColorHex: Record<string, string> = {
-  'bg-white border border-gray-300': '#FFFFFF',
-  'bg-blue-200': '#BFDBFE',
-  'bg-blue-500': '#3B82F6',
-  'bg-yellow-200': '#FDE68A',
-  'bg-yellow-400': '#FACC15',
-  'bg-green-300': '#86EFAC',
-  'bg-green-600': '#16A34A',
-  'bg-amber-600': '#D97706',
-  'bg-amber-800': '#92400E',
-  'bg-amber-900': '#78350F',
-};
 
 export default async function HomePage({
   params,
@@ -72,7 +61,6 @@ export default async function HomePage({
             </thead>
             <tbody>
               {pensum.map(({ kata, kyu }, i) => {
-                const hex = beltColorHex[kyu.beltTailwindColor] ?? '#888';
                 const isComplete = kata.steps.length > 0;
                 return (
                   <tr
@@ -84,10 +72,7 @@ export default async function HomePage({
                       <Link href={`/kyu/${kyu.level}`} className="flex items-center gap-2 group">
                         <span
                           className="inline-block h-4 w-8 rounded-sm flex-shrink-0 shadow-sm"
-                          style={{
-                            backgroundColor: hex,
-                            border: hex === '#FFFFFF' ? '1px solid #e5e7eb' : 'none',
-                          }}
+                          style={getBeltStyle(kyu)}
                         />
                         <span className="text-gray-600 group-hover:text-ashihara-red transition-colors whitespace-nowrap text-xs">
                           {kyu.name[l]}
@@ -125,7 +110,6 @@ export default async function HomePage({
         <h2 className="text-xl font-bold text-gray-800 mb-2">{t('selectKyu')}</h2>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {kyuLevels.map((kyu) => {
-            const hex = beltColorHex[kyu.beltTailwindColor] ?? '#888';
             const katas = allKatas.filter((k) => k.requiredForKyu.includes(kyu.level));
             return (
               <Link
@@ -135,7 +119,7 @@ export default async function HomePage({
               >
                 <span
                   className="flex-shrink-0 h-8 w-3 rounded-sm shadow-sm"
-                  style={{ backgroundColor: hex, border: hex === '#FFFFFF' ? '1px solid #e5e7eb' : 'none' }}
+                  style={getBeltStyle(kyu)}
                 />
                 <div className="min-w-0 flex-1">
                   <p className="font-semibold text-gray-800 text-sm japanese-text">{kyu.name[l]}</p>
