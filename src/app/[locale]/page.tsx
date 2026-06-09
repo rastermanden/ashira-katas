@@ -22,15 +22,11 @@ function buildPensumTable() {
 
 const beltColorHex: Record<string, string> = {
   'bg-white border border-gray-300': '#FFFFFF',
+  'bg-blue-600': '#2563EB',
   'bg-yellow-400': '#FACC15',
-  'bg-orange-500': '#F97316',
-  'bg-blue-500': '#3B82F6',
-  'bg-green-500': '#22C55E',
-  'bg-purple-500': '#A855F7',
+  'bg-green-600': '#16A34A',
   'bg-amber-800': '#92400E',
   'bg-amber-900': '#78350F',
-  'bg-stone-700': '#44403C',
-  'bg-stone-800': '#292524',
 };
 
 export default async function HomePage({
