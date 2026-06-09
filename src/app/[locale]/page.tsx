@@ -1,6 +1,7 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { kyuLevels } from '@/data/kyu';
+import { danLevels } from '@/data/dan';
 import { allKatas } from '@/data/katas';
 import type { Locale } from '@/data/types';
 import { routing } from '@/i18n/routing';
@@ -106,7 +107,7 @@ export default async function HomePage({
       </section>
 
       {/* Kyu level cards */}
-      <section>
+      <section className="mb-10">
         <h2 className="text-xl font-bold text-gray-800 mb-2">{t('selectKyu')}</h2>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {kyuLevels.map((kyu) => {
@@ -129,6 +130,28 @@ export default async function HomePage({
               </Link>
             );
           })}
+        </div>
+      </section>
+
+      {/* Dan level cards */}
+      <section>
+        <h2 className="text-xl font-bold text-gray-800 mb-2">Dan</h2>
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {danLevels.map((dan) => (
+            <div
+              key={dan.level}
+              className="flex items-center gap-3 bg-white rounded-xl border border-gray-200 shadow-sm px-4 py-3 overflow-hidden"
+            >
+              <span
+                className="flex-shrink-0 h-8 w-3 rounded-sm shadow-sm"
+                style={getBeltStyle(dan)}
+              />
+              <div className="min-w-0 flex-1">
+                <p className="font-semibold text-gray-800 text-sm japanese-text">{dan.name[l]}</p>
+                <p className="text-xs text-gray-400 japanese-text">{dan.japaneseNumeral}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
     </div>

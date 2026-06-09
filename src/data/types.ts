@@ -38,3 +38,14 @@ export interface KyuLevel {
   name: LocalizedString;
   requiredKataIds: string[];
 }
+
+export interface DanLevel {
+  level: number;
+  japaneseNumeral: string;
+  beltColor: string;
+  stripeColor?: string;
+  kohaku?: boolean;
+  beltTailwindColor: string;
+  beltTextColor: string;
+  name: LocalizedString;
+}
