@@ -1,0 +1,55 @@
+{
+  "nav": {
+    "home": "Home",
+    "kyu": "Kyu Levels",
+    "kata": "Kata",
+    "siteTitle": "Ashihara Karate — Kata Guide"
+  },
+  "home": {
+    "title": "Ashihara Karate",
+    "subtitle": "Kata Guide",
+    "tagline": "A step-by-step reference for Ashihara Karate kata, from white belt to black belt.",
+    "kyuOverview": "Kyu Level Overview",
+    "selectKyu": "Select a kyu level to see its required kata.",
+    "belt": "Belt",
+    "requiredKata": "Required Kata"
+  },
+  "kyu": {
+    "title": "{kyuName} — Required Kata",
+    "beltColor": "Belt colour",
+    "kataRequired": "Kata required for this level",
+    "steps": "{count} steps",
+    "viewKata": "View Kata",
+    "backToHome": "← All Kyu Levels"
+  },
+  "kata": {
+    "overview": "Overview",
+    "steps": "Steps",
+    "stepCount": "{count} steps",
+    "viewStep": "Step {number}",
+    "youtubeLinks": "Video References",
+    "noVideo": "No videos added yet",
+    "backToKyu": "← Back",
+    "backToKata": "← Kata Overview",
+    "required": "Required for",
+    "comingSoon": "Content coming soon"
+  },
+  "step": {
+    "attacker": "Attacker",
+    "defender": "Defender",
+    "technicalNotes": "Technical Notes",
+    "schoolVariations": "School / Style Variations",
+    "video": "Video",
+    "image": "Illustration",
+    "noImage": "Illustration coming soon",
+    "stepOf": "Step {current} of {total}",
+    "previous": "← Previous Step",
+    "next": "Next Step →",
+    "backToKata": "← Back to Kata Overview"
+  },
+  "language": {
+    "en": "English",
+    "da": "Danish",
+    "ja": "Japanese"
+  }
+}
