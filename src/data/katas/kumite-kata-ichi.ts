@@ -15,7 +15,7 @@ export const kumiteKataIchi: Kata = {
     da: 'Kumite no Kata Sono Ichi er den første af kampformerne i Ashihara Karate. Kataen lægger vægt på brugen af skinnebensblokken (sune-uke) mod rundkick efterfulgt af nærkampskontraer, samt mawashi-uke (vikleblok) indgang til knæspark og kastteknikker.',
     ja: '組手の形一はアシハラ空手の組手型の最初です。この型は回し蹴りに対する脛受けに続く接近戦でのカウンター、そして回し受けから膝蹴りや投げ技への入り方を強調します。',
   },
-  youtubeLinks: [],
+  youtubeLinks: [{ label: 'Kata playlist — Sensei Mazz', url: 'https://www.youtube.com/playlist?list=PL70F81BEA6E5A5663' }],
   steps: [
     {
       stepNumber: 1,

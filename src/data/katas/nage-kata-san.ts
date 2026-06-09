@@ -15,7 +15,7 @@ export const nageKataSan: Kata = {
     da: 'Nage no Kata Sono San introducerer hikitaoshi (nedtagning/nedkastning) som et alternativ til ura-nage og inkorporerer fler-spark-kontraer inden kastet. Trin 3 og 8 inkluderer begge komplekse indgangsekvenser ved hjælp af bagsidepositons-tilgange inden den endelige hikitaoshi.',
     ja: '投げの形三は裏投げの代替として引き倒し（テイクダウン/投げ倒し）を導入し、投げの前に複数の蹴りカウンターを組み込みます。ステップ3と8はどちらも最終的な引き倒しの前に後方位置アプローチを使った複雑な入り身連続を特徴とします。',
   },
-  youtubeLinks: [],
+  youtubeLinks: [{ label: 'Kata playlist — Sensei Mazz', url: 'https://www.youtube.com/playlist?list=PL70F81BEA6E5A5663' }],
   steps: [
     {
       stepNumber: 1,

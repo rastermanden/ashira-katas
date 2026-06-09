@@ -8,7 +8,7 @@ export const kyuLevels: KyuLevel[] = [
     beltTailwindColor: 'bg-white border border-gray-300',
     beltTextColor: 'text-gray-800',
     name: { en: '10th Kyu', da: '10. kyu', ja: '十級' },
-    requiredKataIds: ['kihon-kata-ichi'],
+    requiredKataIds: ['shoshinsha-kata-ichi'],
   },
   {
     level: 9,
@@ -17,7 +17,7 @@ export const kyuLevels: KyuLevel[] = [
     beltTailwindColor: 'bg-yellow-400',
     beltTextColor: 'text-gray-900',
     name: { en: '9th Kyu', da: '9. kyu', ja: '九級' },
-    requiredKataIds: ['kihon-kata-ichi', 'kihon-kata-ni'],
+    requiredKataIds: ['shoshinsha-kata-ichi', 'kihon-kata-ichi'],
   },
   {
     level: 8,
@@ -26,7 +26,7 @@ export const kyuLevels: KyuLevel[] = [
     beltTailwindColor: 'bg-orange-500',
     beltTextColor: 'text-white',
     name: { en: '8th Kyu', da: '8. kyu', ja: '八級' },
-    requiredKataIds: ['kihon-kata-ichi', 'kihon-kata-ni', 'kihon-kata-san'],
+    requiredKataIds: ['shoshinsha-kata-ichi', 'kihon-kata-ichi', 'kumite-kata-ichi'],
   },
   {
     level: 7,
@@ -35,7 +35,7 @@ export const kyuLevels: KyuLevel[] = [
     beltTailwindColor: 'bg-blue-500',
     beltTextColor: 'text-white',
     name: { en: '7th Kyu', da: '7. kyu', ja: '七級' },
-    requiredKataIds: ['kihon-kata-ichi', 'kihon-kata-ni', 'kihon-kata-san', 'kata-1'],
+    requiredKataIds: ['shoshinsha-kata-ichi', 'kihon-kata-ichi', 'kumite-kata-ichi', 'shoshinsha-kata-ni'],
   },
   {
     level: 6,
@@ -44,7 +44,10 @@ export const kyuLevels: KyuLevel[] = [
     beltTailwindColor: 'bg-green-500',
     beltTextColor: 'text-white',
     name: { en: '6th Kyu', da: '6. kyu', ja: '六級' },
-    requiredKataIds: ['kihon-kata-ichi', 'kihon-kata-ni', 'kihon-kata-san', 'kata-1', 'kata-2'],
+    requiredKataIds: [
+      'shoshinsha-kata-ichi', 'kihon-kata-ichi', 'kumite-kata-ichi',
+      'shoshinsha-kata-ni', 'shoshinsha-kata-san', 'kihon-kata-ni',
+    ],
   },
   {
     level: 5,
@@ -53,7 +56,11 @@ export const kyuLevels: KyuLevel[] = [
     beltTailwindColor: 'bg-purple-500',
     beltTextColor: 'text-white',
     name: { en: '5th Kyu', da: '5. kyu', ja: '五級' },
-    requiredKataIds: ['kihon-kata-ichi', 'kihon-kata-ni', 'kihon-kata-san', 'kata-1', 'kata-2', 'kata-3'],
+    requiredKataIds: [
+      'shoshinsha-kata-ichi', 'kihon-kata-ichi', 'kumite-kata-ichi',
+      'shoshinsha-kata-ni', 'shoshinsha-kata-san', 'kihon-kata-ni',
+      'kumite-kata-ni', 'nage-kata-ni',
+    ],
   },
   {
     level: 4,
@@ -62,7 +69,12 @@ export const kyuLevels: KyuLevel[] = [
     beltTailwindColor: 'bg-amber-800',
     beltTextColor: 'text-white',
     name: { en: '4th Kyu', da: '4. kyu', ja: '四級' },
-    requiredKataIds: ['kihon-kata-ichi', 'kihon-kata-ni', 'kihon-kata-san', 'kata-1', 'kata-2', 'kata-3', 'kata-4'],
+    requiredKataIds: [
+      'shoshinsha-kata-ichi', 'kihon-kata-ichi', 'kumite-kata-ichi',
+      'shoshinsha-kata-ni', 'shoshinsha-kata-san', 'kihon-kata-ni',
+      'kumite-kata-ni', 'nage-kata-ni',
+      'kihon-kata-san', 'nage-kata-san',
+    ],
   },
   {
     level: 3,
@@ -71,7 +83,13 @@ export const kyuLevels: KyuLevel[] = [
     beltTailwindColor: 'bg-amber-900',
     beltTextColor: 'text-white',
     name: { en: '3rd Kyu', da: '3. kyu', ja: '三級' },
-    requiredKataIds: ['kihon-kata-ichi', 'kihon-kata-ni', 'kihon-kata-san', 'kata-1', 'kata-2', 'kata-3', 'kata-4', 'kata-5'],
+    requiredKataIds: [
+      'shoshinsha-kata-ichi', 'kihon-kata-ichi', 'kumite-kata-ichi',
+      'shoshinsha-kata-ni', 'shoshinsha-kata-san', 'kihon-kata-ni',
+      'kumite-kata-ni', 'nage-kata-ni',
+      'kihon-kata-san', 'nage-kata-san',
+      'jissen-kata-ichi', 'kumite-kata-san',
+    ],
   },
   {
     level: 2,
@@ -80,7 +98,14 @@ export const kyuLevels: KyuLevel[] = [
     beltTailwindColor: 'bg-stone-700',
     beltTextColor: 'text-white',
     name: { en: '2nd Kyu', da: '2. kyu', ja: '二級' },
-    requiredKataIds: ['kihon-kata-ichi', 'kihon-kata-ni', 'kihon-kata-san', 'kata-1', 'kata-2', 'kata-3', 'kata-4', 'kata-5', 'kata-6'],
+    requiredKataIds: [
+      'shoshinsha-kata-ichi', 'kihon-kata-ichi', 'kumite-kata-ichi',
+      'shoshinsha-kata-ni', 'shoshinsha-kata-san', 'kihon-kata-ni',
+      'kumite-kata-ni', 'nage-kata-ni',
+      'kihon-kata-san', 'nage-kata-san',
+      'jissen-kata-ichi', 'kumite-kata-san',
+      'nage-kata-yon', 'kumite-kata-yon',
+    ],
   },
   {
     level: 1,
@@ -89,7 +114,14 @@ export const kyuLevels: KyuLevel[] = [
     beltTailwindColor: 'bg-stone-800',
     beltTextColor: 'text-white',
     name: { en: '1st Kyu', da: '1. kyu', ja: '一級' },
-    requiredKataIds: ['kihon-kata-ichi', 'kihon-kata-ni', 'kihon-kata-san', 'kata-1', 'kata-2', 'kata-3', 'kata-4', 'kata-5', 'kata-6', 'kata-7'],
+    requiredKataIds: [
+      'shoshinsha-kata-ichi', 'kihon-kata-ichi', 'kumite-kata-ichi',
+      'shoshinsha-kata-ni', 'shoshinsha-kata-san', 'kihon-kata-ni',
+      'kumite-kata-ni', 'nage-kata-ni',
+      'kihon-kata-san', 'nage-kata-san',
+      'jissen-kata-ichi', 'kumite-kata-san',
+      'nage-kata-yon', 'kumite-kata-yon',
+    ],
   },
 ];
 

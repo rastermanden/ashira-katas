@@ -15,7 +15,7 @@ export const shoshinshaKataSan: Kata = {
     da: 'Shoshinsha no Kata Sono San introducerer sidekick og mere avancerede rundkick-kombinationer i forsvarsrepertoiret. Kataen udvikler evnen til at håndtere spark fra flere vinkler og tilføjer indgange med kansetsu-geri (ledspark) mod støttebenet.',
     ja: '初心者の形三は横蹴りとより高度な回し蹴りの組み合わせを防御のレパートリーに導入します。この型は複数の角度からの蹴りに対処する能力を発展させ、支持脚を狙う関節蹴りを使った入り方を加えます。',
   },
-  youtubeLinks: [],
+  youtubeLinks: [{ label: 'Kata playlist — Sensei Mazz', url: 'https://www.youtube.com/playlist?list=PL70F81BEA6E5A5663' }],
   steps: [
     {
       stepNumber: 1,

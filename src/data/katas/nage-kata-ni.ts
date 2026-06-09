@@ -15,7 +15,7 @@ export const nageKataNi: Kata = {
     da: 'Nage no Kata Sono Ni bygger videre på den første kastform ved at tilføje knæspark inden hvert kast. Mod rundkick indsættes et hiza-geri inden maki komi nage; mod frontspark forudgår et knæspark til bagsiden af hovedet ura-nage. Dette udvikler princippet om at svække modstanderen inden kastet.',
     ja: '投げの形二は最初の投げ型の上に構築され、各投げの前に膝蹴りを追加します。回し蹴りに対しては巻き込み投げの前に膝蹴りを入れ、前蹴りに対しては裏投げの前に頭の後部への膝蹴りが先行します。これにより投げる前に相手を弱める原則が発展します。',
   },
-  youtubeLinks: [],
+  youtubeLinks: [{ label: 'Kata playlist — Sensei Mazz', url: 'https://www.youtube.com/playlist?list=PL70F81BEA6E5A5663' }],
   steps: [
     {
       stepNumber: 1,
