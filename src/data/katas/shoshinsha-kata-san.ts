@@ -9,7 +9,6 @@ export const shoshinshaKataSan: Kata = {
     da: 'Begynderens Kata 3',
     ja: '初心者の型 三',
   },
-  requiredForKyu: [6, 5, 4, 3, 2, 1],
   description: {
     en: 'Shoshinsha no Kata are the beginner\'s solo forms of Ashihara Karate, performed alone against an imagined opponent. This third form teaches the basic block-and-counter sabaki sequences, emphasising kick-against-kick exchanges with joint kicks, inner-thigh kicks, spinning roundhouse kicks, and a closing throw. It rounds out the timing and distance foundation built across the beginner forms.',
     da: 'Shoshinsha no Kata er Ashihara Karates begynder-soloformer, der udføres alene mod en forestillet modstander. Denne tredje form lærer de grundlæggende blok-og-kontra sabaki-sekvenser og lægger vægt på spark-mod-spark-udvekslinger med ledspark, indvendige lårspark, drejende cirkelspark og et afsluttende kast. Den fuldender det fundament af timing og afstand, der bygges gennem begynderformerne.',

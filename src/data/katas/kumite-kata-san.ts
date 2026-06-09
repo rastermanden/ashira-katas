@@ -9,7 +9,6 @@ export const kumiteKataSan: Kata = {
     da: 'Kumite Kata 3',
     ja: '組手の型 三',
   },
-  requiredForKyu: [3, 2, 1],
   description: {
     en: 'The Kumite no Kata are the sparring forms of Ashihara Karate — flowing defence-and-counter sequences performed solo against an imagined opponent. They emphasise mawashi-geri (roundhouse) exchanges, knee strikes (hiza-geri), throws and the closing fumikomi stamp. Kumite no Kata — Sono San is the third of these forms.',
     da: 'Kumite no Kata er Ashihara Karates sparringsformer — flydende forsvars- og kontrasekvenser udført solo mod en forestillet modstander. De lægger vægt på mawashi-geri (cirkelspark) udvekslinger, knæstød (hiza-geri), kast og det afsluttende fumikomi-stamp. Kumite no Kata — Sono San er den tredje af disse former.',

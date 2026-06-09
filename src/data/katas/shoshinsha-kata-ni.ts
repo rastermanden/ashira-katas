@@ -9,7 +9,6 @@ export const shoshinshaKataNi: Kata = {
     da: 'Begynderens Kata 2',
     ja: '初心者の型 二',
   },
-  requiredForKyu: [8, 7, 6, 5, 4, 3, 2, 1],
   description: {
     en: 'Shoshinsha no Kata are the beginner\'s solo forms of Ashihara Karate, performed alone against an imagined opponent. This second form teaches the basic block-and-counter sabaki sequences, layering combination punching, boxing-style hooks and uppercuts, and roundhouse kicks onto the stepping evasions. It deepens the timing and distance foundation begun in the first beginner form.',
     da: 'Shoshinsha no Kata er Ashihara Karates begynder-soloformer, der udføres alene mod en forestillet modstander. Denne anden form lærer de grundlæggende blok-og-kontra sabaki-sekvenser og lægger kombinationsstød, bokse-hooks og uppercuts samt cirkelspark oven på trinundvigelserne. Den uddyber det fundament af timing og afstand, som den første begynderform påbegyndte.',

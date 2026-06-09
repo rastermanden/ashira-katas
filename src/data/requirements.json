@@ -1,0 +1,150 @@
+{
+  "_comment": "Single source of truth for which katas each kyu grading requires. Edit this file to update the pensum. Cumulative: each kyu lists every kata required to grade at that belt, in pensum order. kataId must match an id in src/data/katas. An optional `note` (with en/da/ja text) can be added to any kata entry. Mapping follows the Ashihara Karate København pensum: the named-kata grades (6.-1. kyu) come straight from the pensum; the pre-yellow grades (10.-7. kyu) map to the basic katas the pensum schedules before yellow belt. Kumite no Kata 5 and Jissen no Kata 2 are formally 1st dan (shodan) requirements; they are listed at 1. kyu (with a note) so they remain visible until a dan-requirements model exists.",
+  "kyuRequirements": [
+    {
+      "kyuLevel": 10,
+      "katas": [{ "kataId": "kihon-kata-ichi" }]
+    },
+    {
+      "kyuLevel": 9,
+      "katas": [
+        { "kataId": "kihon-kata-ichi" },
+        { "kataId": "shoshinsha-kata-ichi" }
+      ]
+    },
+    {
+      "kyuLevel": 8,
+      "katas": [
+        { "kataId": "kihon-kata-ichi" },
+        { "kataId": "shoshinsha-kata-ichi" },
+        { "kataId": "shoshinsha-kata-ni" }
+      ]
+    },
+    {
+      "kyuLevel": 7,
+      "katas": [
+        { "kataId": "kihon-kata-ichi" },
+        { "kataId": "shoshinsha-kata-ichi" },
+        { "kataId": "shoshinsha-kata-ni" },
+        { "kataId": "nage-kata-ichi" },
+        { "kataId": "kumite-kata-ichi" }
+      ]
+    },
+    {
+      "kyuLevel": 6,
+      "katas": [
+        { "kataId": "kihon-kata-ichi" },
+        { "kataId": "shoshinsha-kata-ichi" },
+        { "kataId": "shoshinsha-kata-ni" },
+        { "kataId": "nage-kata-ichi" },
+        { "kataId": "kumite-kata-ichi" },
+        { "kataId": "shoshinsha-kata-san" },
+        { "kataId": "kihon-kata-ni" }
+      ]
+    },
+    {
+      "kyuLevel": 5,
+      "katas": [
+        { "kataId": "kihon-kata-ichi" },
+        { "kataId": "shoshinsha-kata-ichi" },
+        { "kataId": "shoshinsha-kata-ni" },
+        { "kataId": "nage-kata-ichi" },
+        { "kataId": "kumite-kata-ichi" },
+        { "kataId": "shoshinsha-kata-san" },
+        { "kataId": "kihon-kata-ni" },
+        { "kataId": "nage-kata-ni" },
+        { "kataId": "kumite-kata-ni" }
+      ]
+    },
+    {
+      "kyuLevel": 4,
+      "katas": [
+        { "kataId": "kihon-kata-ichi" },
+        { "kataId": "shoshinsha-kata-ichi" },
+        { "kataId": "shoshinsha-kata-ni" },
+        { "kataId": "nage-kata-ichi" },
+        { "kataId": "kumite-kata-ichi" },
+        { "kataId": "shoshinsha-kata-san" },
+        { "kataId": "kihon-kata-ni" },
+        { "kataId": "nage-kata-ni" },
+        { "kataId": "kumite-kata-ni" },
+        { "kataId": "kihon-kata-san" },
+        { "kataId": "nage-kata-san" }
+      ]
+    },
+    {
+      "kyuLevel": 3,
+      "katas": [
+        { "kataId": "kihon-kata-ichi" },
+        { "kataId": "shoshinsha-kata-ichi" },
+        { "kataId": "shoshinsha-kata-ni" },
+        { "kataId": "nage-kata-ichi" },
+        { "kataId": "kumite-kata-ichi" },
+        { "kataId": "shoshinsha-kata-san" },
+        { "kataId": "kihon-kata-ni" },
+        { "kataId": "nage-kata-ni" },
+        { "kataId": "kumite-kata-ni" },
+        { "kataId": "kihon-kata-san" },
+        { "kataId": "nage-kata-san" },
+        { "kataId": "kumite-kata-san" },
+        { "kataId": "jissen-kata-ichi" }
+      ]
+    },
+    {
+      "kyuLevel": 2,
+      "katas": [
+        { "kataId": "kihon-kata-ichi" },
+        { "kataId": "shoshinsha-kata-ichi" },
+        { "kataId": "shoshinsha-kata-ni" },
+        { "kataId": "nage-kata-ichi" },
+        { "kataId": "kumite-kata-ichi" },
+        { "kataId": "shoshinsha-kata-san" },
+        { "kataId": "kihon-kata-ni" },
+        { "kataId": "nage-kata-ni" },
+        { "kataId": "kumite-kata-ni" },
+        { "kataId": "kihon-kata-san" },
+        { "kataId": "nage-kata-san" },
+        { "kataId": "kumite-kata-san" },
+        { "kataId": "jissen-kata-ichi" },
+        { "kataId": "nage-kata-yon" },
+        { "kataId": "kumite-kata-yon" }
+      ]
+    },
+    {
+      "kyuLevel": 1,
+      "katas": [
+        { "kataId": "kihon-kata-ichi" },
+        { "kataId": "shoshinsha-kata-ichi" },
+        { "kataId": "shoshinsha-kata-ni" },
+        { "kataId": "nage-kata-ichi" },
+        { "kataId": "kumite-kata-ichi" },
+        { "kataId": "shoshinsha-kata-san" },
+        { "kataId": "kihon-kata-ni" },
+        { "kataId": "nage-kata-ni" },
+        { "kataId": "kumite-kata-ni" },
+        { "kataId": "kihon-kata-san" },
+        { "kataId": "nage-kata-san" },
+        { "kataId": "kumite-kata-san" },
+        { "kataId": "jissen-kata-ichi" },
+        { "kataId": "nage-kata-yon" },
+        { "kataId": "kumite-kata-yon" },
+        {
+          "kataId": "kumite-kata-go",
+          "note": {
+            "en": "Formally a 1st dan (shodan) requirement",
+            "da": "Formelt et krav til 1. dan (shodan)",
+            "ja": "正式には初段の課題"
+          }
+        },
+        {
+          "kataId": "jissen-kata-ni",
+          "note": {
+            "en": "Formally a 1st dan (shodan) requirement",
+            "da": "Formelt et krav til 1. dan (shodan)",
+            "ja": "正式には初段の課題"
+          }
+        }
+      ]
+    }
+  ]
+}

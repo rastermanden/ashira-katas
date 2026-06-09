@@ -9,7 +9,6 @@ export const kumiteKataGo: Kata = {
     da: 'Kumite Kata 5',
     ja: '組手の型 五',
   },
-  requiredForKyu: [1],
   description: {
     en: 'Kumite no Kata — Sono Go is the most advanced of the Ashihara Karate sparring forms, performed solo against an imagined opponent, and is formally a 1st dan (shodan) grading requirement. It chains long spinning-kick sequences together and includes defence against an opponent attacking from behind. The form closes with a back throw, knee strike and the familiar stamping finish before returning to the fighting stance.',
     da: 'Kumite no Kata — Sono Go er den mest avancerede af Ashihara Karates sparringsformer, udført solo mod en forestillet modstander, og er formelt et krav til 1. dan (shodan) gradueringen. Den kæder lange drejesparksekvenser sammen og indeholder forsvar mod en modstander, der angriber bagfra. Formen afsluttes med et bagkast, knæstød og den velkendte stamp-afslutning, før den vender tilbage til kampstillingen.',

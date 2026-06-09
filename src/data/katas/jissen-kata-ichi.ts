@@ -9,7 +9,6 @@ export const jissenKataIchi: Kata = {
     da: 'Jissen Kata 1',
     ja: '実戦の型 一',
   },
-  requiredForKyu: [3, 2, 1],
   description: {
     en: 'Jissen no Kata — Sono Ichi is the combat ("real fight") form of Ashihara Karate, performed solo against an imagined opponent. It works at close range, using inside blocks, boxing-style hooks and uppercuts, elbow strikes and close-range counters against punches and kicks. The form closes with a punch and a downward elbow strike before returning to the fighting stance.',
     da: 'Jissen no Kata — Sono Ichi er kampformen ("rigtig kamp") i Ashihara Karate, udført solo mod en forestillet modstander. Den arbejder på kort afstand med indvendige blokeringer, boksningsinspirerede hooks og uppercuts, albuestød og nærkamps-kontringer mod stød og spark. Formen afsluttes med et stød og et nedadgående albuestød, før den vender tilbage til kampstillingen.',

@@ -9,7 +9,6 @@ export const nageKataYon: Kata = {
     da: 'Kasteform 4',
     ja: '投げの型 四',
   },
-  requiredForKyu: [2, 1],
   description: {
     en: 'The Nage no Kata are the throwing forms of Ashihara Karate — each block-and-clinch sequence ends in a throw. Sono Ichi and Sono Ni build the core throws (maki-komi-nage, ura-nage, kubi-nage); Sono San and Sono Yon add knee strikes, takedowns (hikitaoshi) and longer combinations. Sono Yon weaves inner-thigh kicks, boxing-style strikes, pull-down takedowns (hikitaoshi) and extended kicking combinations against an imagined opponent.',
     da: 'Nage no Kata er kasteformerne i Ashihara Karate — hver blok-og-clinch-sekvens ender i et kast. Sono Ichi og Sono Ni opbygger kernekastene (maki-komi-nage, ura-nage, kubi-nage); Sono San og Sono Yon tilføjer knæstød, nedtagninger (hikitaoshi) og længere kombinationer. Sono Yon væver indvendige lårspark, boksestil-slag, nedtræknings-nedtagninger (hikitaoshi) og udvidede sparkekombinationer mod en forestillet modstander.',

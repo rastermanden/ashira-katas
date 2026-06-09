@@ -1,9 +1,12 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { kyuLevels } from '@/data/kyu';
-import { allKatas } from '@/data/katas';
+import { danLevels } from '@/data/dan';
+import { allKatas, getKatasForKyu } from '@/data/katas';
+import { getKyusRequiringKata } from '@/data/requirements';
 import type { Locale } from '@/data/types';
 import { routing } from '@/i18n/routing';
+import { getBeltStyle } from '@/lib/belt';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -13,21 +16,21 @@ export function generateStaticParams() {
 function buildPensumTable() {
   return allKatas
     .map((kata) => {
-      const firstKyu = Math.max(...kata.requiredForKyu);
-      const kyu = kyuLevels.find((k) => k.level === firstKyu)!;
-      return { kata, kyu, firstKyu };
+      const requiringKyus = getKyusRequiringKata(kata.id);
+      const firstKyu = requiringKyus.length > 0 ? Math.max(...requiringKyus) : null;
+      return { kata, firstKyu };
     })
+    .filter(
+      (row): row is { kata: (typeof allKatas)[number]; firstKyu: number } =>
+        row.firstKyu !== null,
+    )
+    .map((row) => ({
+      ...row,
+      kyu: kyuLevels.find((k) => k.level === row.firstKyu)!,
+    }))
     .sort((a, b) => b.firstKyu - a.firstKyu); // 10 → 9 → … → 1
 }
 
-const beltColorHex: Record<string, string> = {
-  'bg-white border border-gray-300': '#FFFFFF',
-  'bg-blue-600': '#2563EB',
-  'bg-yellow-400': '#FACC15',
-  'bg-green-600': '#16A34A',
-  'bg-amber-800': '#92400E',
-  'bg-amber-900': '#78350F',
-};
 
 export default async function HomePage({
   params,
@@ -68,7 +71,6 @@ export default async function HomePage({
             </thead>
             <tbody>
               {pensum.map(({ kata, kyu }, i) => {
-                const hex = beltColorHex[kyu.beltTailwindColor] ?? '#888';
                 const isComplete = kata.steps.length > 0;
                 return (
                   <tr
@@ -80,10 +82,7 @@ export default async function HomePage({
                       <Link href={`/kyu/${kyu.level}`} className="flex items-center gap-2 group">
                         <span
                           className="inline-block h-4 w-8 rounded-sm flex-shrink-0 shadow-sm"
-                          style={{
-                            backgroundColor: hex,
-                            border: hex === '#FFFFFF' ? '1px solid #e5e7eb' : 'none',
-                          }}
+                          style={getBeltStyle(kyu)}
                         />
                         <span className="text-gray-600 group-hover:text-ashihara-red transition-colors whitespace-nowrap text-xs">
                           {kyu.name[l]}
@@ -117,12 +116,11 @@ export default async function HomePage({
       </section>
 
       {/* Kyu level cards */}
-      <section>
+      <section className="mb-10">
         <h2 className="text-xl font-bold text-gray-800 mb-2">{t('selectKyu')}</h2>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {kyuLevels.map((kyu) => {
-            const hex = beltColorHex[kyu.beltTailwindColor] ?? '#888';
-            const katas = allKatas.filter((k) => k.requiredForKyu.includes(kyu.level));
+            const katas = getKatasForKyu(kyu.level);
             return (
               <Link
                 key={kyu.level}
@@ -131,7 +129,7 @@ export default async function HomePage({
               >
                 <span
                   className="flex-shrink-0 h-8 w-3 rounded-sm shadow-sm"
-                  style={{ backgroundColor: hex, border: hex === '#FFFFFF' ? '1px solid #e5e7eb' : 'none' }}
+                  style={getBeltStyle(kyu)}
                 />
                 <div className="min-w-0 flex-1">
                   <p className="font-semibold text-gray-800 text-sm japanese-text">{kyu.name[l]}</p>
@@ -141,6 +139,28 @@ export default async function HomePage({
               </Link>
             );
           })}
+        </div>
+      </section>
+
+      {/* Dan level cards */}
+      <section>
+        <h2 className="text-xl font-bold text-gray-800 mb-2">Dan</h2>
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {danLevels.map((dan) => (
+            <div
+              key={dan.level}
+              className="flex items-center gap-3 bg-white rounded-xl border border-gray-200 shadow-sm px-4 py-3 overflow-hidden"
+            >
+              <span
+                className="flex-shrink-0 h-8 w-3 rounded-sm shadow-sm"
+                style={getBeltStyle(dan)}
+              />
+              <div className="min-w-0 flex-1">
+                <p className="font-semibold text-gray-800 text-sm japanese-text">{dan.name[l]}</p>
+                <p className="text-xs text-gray-400 japanese-text">{dan.japaneseNumeral}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
     </div>

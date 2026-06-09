@@ -9,7 +9,6 @@ export const kumiteKataNi: Kata = {
     da: 'Kumite Kata 2',
     ja: '組手の型 二',
   },
-  requiredForKyu: [5, 4, 3, 2, 1],
   description: {
     en: 'The Kumite no Kata are the sparring forms of Ashihara Karate — flowing defence-and-counter sequences performed solo against an imagined opponent. They emphasise mawashi-geri (roundhouse) exchanges, knee strikes (hiza-geri), throws and the closing fumikomi stamp. Kumite no Kata — Sono Ni is the second of these forms.',
     da: 'Kumite no Kata er Ashihara Karates sparringsformer — flydende forsvars- og kontrasekvenser udført solo mod en forestillet modstander. De lægger vægt på mawashi-geri (cirkelspark) udvekslinger, knæstød (hiza-geri), kast og det afsluttende fumikomi-stamp. Kumite no Kata — Sono Ni er den anden af disse former.',

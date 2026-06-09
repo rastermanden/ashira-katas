@@ -1,4 +1,5 @@
 import type { Kata } from '../types';
+import { getRequiredKataIds } from '../requirements';
 import { shoshinshaKataIchi } from './shoshinsha-kata-ichi';
 import { shoshinshaKataNi } from './shoshinsha-kata-ni';
 import { shoshinshaKataSan } from './shoshinsha-kata-san';
@@ -43,5 +44,7 @@ export function getKataById(id: string): Kata | undefined {
 }
 
 export function getKatasForKyu(kyuLevel: number): Kata[] {
-  return allKatas.filter((k) => k.requiredForKyu.includes(kyuLevel));
+  return getRequiredKataIds(kyuLevel)
+    .map((id) => getKataById(id))
+    .filter((k): k is Kata => k !== undefined);
 }

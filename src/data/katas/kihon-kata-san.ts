@@ -9,7 +9,6 @@ export const kihonKataSan: Kata = {
     da: 'Kihon no Kata — Sono San',
     ja: '基本の型 三',
   },
-  requiredForKyu: [4, 3, 2, 1],
   description: {
     en: 'The Kihon no Kata are the basic solo forms of Ashihara Karate, performed against an imagined opponent. They drill sabaki footwork — including the directional quadrant positions (pos 1-4) and 45° diagonal side-steps — together with block-and-counter combinations and kicks. Sono San is the third of these forms, defending against advanced kicks and adding spinning kicks, hammer-fist strikes and cross-step footwork.',
     da: 'Kihon no Kata er Ashihara Karates grundlæggende soloformer, udført mod en forestillet modstander. De træner sabaki-fodarbejde — herunder de retningsbestemte kvadrantpositioner (pos 1-4) og 45° diagonale sidetrin — sammen med blok-og-kontra-kombinationer og spark. Sono San er den tredje af disse former og forsvarer mod avancerede spark samt tilføjer drejespark, hammerslag og krydstrin-fodarbejde.',

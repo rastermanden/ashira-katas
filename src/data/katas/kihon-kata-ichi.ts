@@ -9,7 +9,6 @@ export const kihonKataIchi: Kata = {
     da: 'Kihon no Kata — Sono Ichi',
     ja: '基本の型 一',
   },
-  requiredForKyu: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
   description: {
     en: 'The Kihon no Kata are the basic solo forms of Ashihara Karate, performed against an imagined opponent. They drill sabaki footwork — including the directional quadrant positions (pos 1-4) and 45° diagonal side-steps — together with block-and-counter combinations and kicks. Sono Ichi is the first of these forms and establishes the core hiki-ashi retreat, side-step evasion and roundhouse counters.',
     da: 'Kihon no Kata er Ashihara Karates grundlæggende soloformer, udført mod en forestillet modstander. De træner sabaki-fodarbejde — herunder de retningsbestemte kvadrantpositioner (pos 1-4) og 45° diagonale sidetrin — sammen med blok-og-kontra-kombinationer og spark. Sono Ichi er den første af disse former og etablerer det centrale hiki-ashi-tilbagetræk, sidetrins-undvigelse og roundhouse-kontraer.',
