@@ -37,9 +37,24 @@ jobs:
         env:
           BASE_PATH: /ashira-katas/pr-preview/pr-${{ github.event.number }}
 
-      - name: Add .nojekyll
+      - name: Add .nojekyll to build output
         if: github.event.action != 'closed'
         run: touch out/.nojekyll
+
+      # Seed .nojekyll at the ROOT of gh-pages so Jekyll never runs.
+      # Without this, GitHub Pages ignores the _next/ asset directory.
+      - name: Seed .nojekyll at gh-pages root
+        if: github.event.action != 'closed'
+        run: mkdir -p /tmp/nojekyll-root && touch /tmp/nojekyll-root/.nojekyll
+
+      - name: Deploy .nojekyll to gh-pages root
+        if: github.event.action != 'closed'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: /tmp/nojekyll-root
+          keep_files: true
+          commit_message: 'ci: ensure .nojekyll at gh-pages root'
 
       - name: Deploy PR preview
         uses: rossjrw/pr-preview-action@v1

@@ -9,10 +9,10 @@
     "title": "Ashihara Karate",
     "subtitle": "Kata Guide",
     "tagline": "A step-by-step reference for Ashihara Karate kata, from white belt to black belt.",
-    "kyuOverview": "Kyu Level Overview",
-    "selectKyu": "Select a kyu level to see its required kata.",
+    "kyuOverview": "Pensum Overview",
+    "selectKyu": "Browse by Kyu Level",
     "belt": "Belt",
-    "requiredKata": "Required Kata"
+    "requiredKata": "Kata"
   },
   "kyu": {
     "title": "{kyuName} — Required Kata",

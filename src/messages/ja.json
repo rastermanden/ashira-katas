@@ -9,10 +9,10 @@
     "title": "アシハラ空手",
     "subtitle": "型ガイド",
     "tagline": "白帯から黒帯まで、アシハラ空手の型をステップごとに解説します。",
-    "kyuOverview": "級レベル一覧",
-    "selectKyu": "級レベルを選択して必要な型を確認してください。",
+    "kyuOverview": "カリキュラム一覧",
+    "selectKyu": "級レベル別に見る",
     "belt": "帯",
-    "requiredKata": "必要な型"
+    "requiredKata": "型"
   },
   "kyu": {
     "title": "{kyuName} — 必要な型",

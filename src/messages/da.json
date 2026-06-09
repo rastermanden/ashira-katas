@@ -9,10 +9,10 @@
     "title": "Ashihara Karate",
     "subtitle": "Kata-guide",
     "tagline": "En trin-for-trin reference til Ashihara Karate kata, fra hvidt bælte til sort bælte.",
-    "kyuOverview": "Oversigt over kyu-niveauer",
-    "selectKyu": "Vælg et kyu-niveau for at se dets påkrævede kata.",
+    "kyuOverview": "Pensumoversigt",
+    "selectKyu": "Gennemse efter kyu-niveau",
     "belt": "Bælte",
-    "requiredKata": "Påkrævet kata"
+    "requiredKata": "Kata"
   },
   "kyu": {
     "title": "{kyuName} — Påkrævet kata",
