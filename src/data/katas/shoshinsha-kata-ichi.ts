@@ -15,7 +15,7 @@ export const shoshinshaKataIchi: Kata = {
     da: 'Shoshinsha no Kata Sono Ichi er den første kata i Ashihara Karate. Der lægges vægt på at træde tilbage, bedømme afstand og nagashi-type afværgning. Kataen introducerer det grundlæggende angriber-forsvarer-forhold med basale slag og frontspark.',
     ja: '初心者の形一はアシハラ空手の最初の型です。後退、間合いの判断、流し型の受けが強調されます。この型は基本的な突きと前蹴りを用いた攻撃と防御の基本的な関係を紹介します。',
   },
-  youtubeLinks: [{ label: 'Kata playlist — Sensei Mazz', url: 'https://www.youtube.com/playlist?list=PL70F81BEA6E5A5663' }],
+  youtubeLinks: [{ label: 'Shoshinsha no Kata Sono Ichi — Sensei Mazz', url: 'https://youtu.be/npTj8t4i8wU' }],
   steps: [
     {
       stepNumber: 1,
