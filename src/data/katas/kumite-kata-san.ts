@@ -14,7 +14,7 @@ export const kumiteKataSan: Kata = {
     da: 'Kumite no Kata er Ashihara Karates sparringsformer — flydende forsvars- og kontrasekvenser udført solo mod en forestillet modstander. De lægger vægt på mawashi-geri (cirkelspark) udvekslinger, knæstød (hiza-geri), kast og det afsluttende fumikomi-stamp. Kumite no Kata — Sono San er den tredje af disse former.',
     ja: '組手の型はアシハラ空手の組手形であり、想定した相手に対して単独で行う流れるような防御と反撃の連続です。回し蹴りの応酬、膝蹴り（膝蹴り）、投げ、そして締めくくりの踏み込みを重視します。組手の型 三はこれらの型の三番目のものです。',
   },
-  youtubeLinks: [],
+  youtubeLinks: [{ label: 'Kumite no Kata Sono San — Sensei Mazz', url: 'https://youtu.be/4o0EoCJ6aBY' }],
   steps: [
     {
       stepNumber: 1,

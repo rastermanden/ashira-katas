@@ -14,7 +14,7 @@ export const kihonKataIchi: Kata = {
     da: 'Kihon no Kata er Ashihara Karates grundlæggende soloformer, udført mod en forestillet modstander. De træner sabaki-fodarbejde — herunder de retningsbestemte kvadrantpositioner (pos 1-4) og 45° diagonale sidetrin — sammen med blok-og-kontra-kombinationer og spark. Sono Ichi er den første af disse former og etablerer det centrale hiki-ashi-tilbagetræk, sidetrins-undvigelse og roundhouse-kontraer.',
     ja: '基本の型はアシハラ空手の基本的な単独形で、想定した相手に対して行います。捌きの足さばき——方向別の四隅の位置（ポジション1〜4）と45度の斜め側方ステップを含む——とともに、受けからの反撃の組み合わせと蹴りを反復稽古します。其の一はこれらの型の最初のもので、基本となる引き足、側方ステップによる回避、回し蹴りでの反撃を確立します。',
   },
-  youtubeLinks: [],
+  youtubeLinks: [{ label: 'Kihon no Kata Sono Ichi — Sensei Mazz', url: 'https://youtu.be/GOp_FB7DK7A' }],
   steps: [
     {
       stepNumber: 1,

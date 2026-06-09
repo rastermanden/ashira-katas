@@ -14,7 +14,7 @@ export const kumiteKataYon: Kata = {
     da: 'Kumite no Kata — Sono Yon er en avanceret sparringsform i Ashihara Karate, udført solo mod en forestillet modstander. Den bygger videre på de tidligere kumite-former ved at tilføje springende drejespark (ushiro mawashi tobi-geri) og afslutninger, der kombinerer dobbelte knæstød og kast. Formen kæder lange cirkelspark- og drejesparksekvenser sammen, før den afsluttes med et stamp-spark og en tilbagevenden til kampstillingen.',
     ja: '組手の型 四はアシハラ空手の上級組手形であり、想定した相手に対して単独で行います。先行する組手形を発展させ、跳び後ろ回し蹴り（ushiro mawashi tobi-geri）や、二段の膝蹴りと投げを組み合わせた締めを加えています。長い回し蹴りと後ろ回し蹴りの連続を組み合わせ、最後に踏み込みと構えへの復帰で締めくくります。',
   },
-  youtubeLinks: [],
+  youtubeLinks: [{ label: 'Kumite no Kata Sono Yon — Sensei Mazz', url: 'https://youtu.be/uEtXIV4wd1o' }],
   steps: [
     {
       stepNumber: 1,

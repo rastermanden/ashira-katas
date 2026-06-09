@@ -14,7 +14,7 @@ export const kihonKataSan: Kata = {
     da: 'Kihon no Kata er Ashihara Karates grundlæggende soloformer, udført mod en forestillet modstander. De træner sabaki-fodarbejde — herunder de retningsbestemte kvadrantpositioner (pos 1-4) og 45° diagonale sidetrin — sammen med blok-og-kontra-kombinationer og spark. Sono San er den tredje af disse former og forsvarer mod avancerede spark samt tilføjer drejespark, hammerslag og krydstrin-fodarbejde.',
     ja: '基本の型はアシハラ空手の基本的な単独形で、想定した相手に対して行います。捌きの足さばき——方向別の四隅の位置（ポジション1〜4）と45度の斜め側方ステップを含む——とともに、受けからの反撃の組み合わせと蹴りを反復稽古します。其の三はこれらの型の三番目のもので、上級の蹴りに対処し、後ろ回し蹴り、鉄槌打ち、クロスステップの足さばきを加えます。',
   },
-  youtubeLinks: [],
+  youtubeLinks: [{ label: 'Kihon no Kata Sono San — Sensei Mazz', url: 'https://youtu.be/sxz-ujyWdyo' }],
   steps: [
     {
       stepNumber: 1,
