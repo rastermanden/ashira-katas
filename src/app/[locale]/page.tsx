@@ -12,6 +12,7 @@ export function generateStaticParams() {
 // Map each kata to the kyu level where it is FIRST introduced (highest kyu number = earliest).
 function buildPensumTable() {
   return allKatas
+    .filter((kata) => kata.requiredForKyu.length > 0)
     .map((kata) => {
       const firstKyu = Math.max(...kata.requiredForKyu);
       const kyu = kyuLevels.find((k) => k.level === firstKyu)!;
