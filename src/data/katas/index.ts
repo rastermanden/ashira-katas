@@ -1,105 +1,42 @@
 import type { Kata } from '../types';
 import { getRequiredKataIds } from '../requirements';
+import { shoshinshaKataIchi } from './shoshinsha-kata-ichi';
+import { shoshinshaKataNi } from './shoshinsha-kata-ni';
+import { shoshinshaKataSan } from './shoshinsha-kata-san';
 import { kihonKataIchi } from './kihon-kata-ichi';
 import { kihonKataNi } from './kihon-kata-ni';
 import { kihonKataSan } from './kihon-kata-san';
+import { nageKataIchi } from './nage-kata-ichi';
+import { nageKataNi } from './nage-kata-ni';
+import { nageKataSan } from './nage-kata-san';
+import { nageKataYon } from './nage-kata-yon';
+import { kumiteKataIchi } from './kumite-kata-ichi';
+import { kumiteKataNi } from './kumite-kata-ni';
+import { kumiteKataSan } from './kumite-kata-san';
+import { kumiteKataYon } from './kumite-kata-yon';
+import { kumiteKataGo } from './kumite-kata-go';
+import { jissenKataIchi } from './jissen-kata-ichi';
+import { jissenKataNi } from './jissen-kata-ni';
 
+// All 17 katas of the Ashihara Karate København pensum, in curriculum order.
 export const allKatas: Kata[] = [
   kihonKataIchi,
+  shoshinshaKataIchi,
+  shoshinshaKataNi,
+  nageKataIchi,
+  kumiteKataIchi,
+  shoshinshaKataSan,
   kihonKataNi,
+  nageKataNi,
+  kumiteKataNi,
   kihonKataSan,
-  // Placeholder stubs for higher katas — content to be filled in
-  {
-    id: 'kata-1',
-    japaneseCharacters: '形一',
-    romaji: 'Kata Ichi',
-    name: { en: 'Kata 1', da: 'Kata 1', ja: '形一' },
-    description: {
-      en: 'Content coming soon. This kata is required from 7th kyu onwards.',
-      da: 'Indhold kommer snart. Denne kata kræves fra 7. kyu og frem.',
-      ja: 'コンテンツは近日公開予定です。この型は7級以上で必要です。',
-    },
-    youtubeLinks: [],
-    steps: [],
-  },
-  {
-    id: 'kata-2',
-    japaneseCharacters: '形二',
-    romaji: 'Kata Ni',
-    name: { en: 'Kata 2', da: 'Kata 2', ja: '形二' },
-    description: {
-      en: 'Content coming soon. This kata is required from 6th kyu onwards.',
-      da: 'Indhold kommer snart. Denne kata kræves fra 6. kyu og frem.',
-      ja: 'コンテンツは近日公開予定です。この型は6級以上で必要です。',
-    },
-    youtubeLinks: [],
-    steps: [],
-  },
-  {
-    id: 'kata-3',
-    japaneseCharacters: '形三',
-    romaji: 'Kata San',
-    name: { en: 'Kata 3', da: 'Kata 3', ja: '形三' },
-    description: {
-      en: 'Content coming soon. This kata is required from 5th kyu onwards.',
-      da: 'Indhold kommer snart. Denne kata kræves fra 5. kyu og frem.',
-      ja: 'コンテンツは近日公開予定です。この型は5級以上で必要です。',
-    },
-    youtubeLinks: [],
-    steps: [],
-  },
-  {
-    id: 'kata-4',
-    japaneseCharacters: '形四',
-    romaji: 'Kata Shi',
-    name: { en: 'Kata 4', da: 'Kata 4', ja: '形四' },
-    description: {
-      en: 'Content coming soon. This kata is required from 4th kyu onwards.',
-      da: 'Indhold kommer snart. Denne kata kræves fra 4. kyu og frem.',
-      ja: 'コンテンツは近日公開予定です。この型は4級以上で必要です。',
-    },
-    youtubeLinks: [],
-    steps: [],
-  },
-  {
-    id: 'kata-5',
-    japaneseCharacters: '形五',
-    romaji: 'Kata Go',
-    name: { en: 'Kata 5', da: 'Kata 5', ja: '形五' },
-    description: {
-      en: 'Content coming soon. This kata is required from 3rd kyu onwards.',
-      da: 'Indhold kommer snart. Denne kata kræves fra 3. kyu og frem.',
-      ja: 'コンテンツは近日公開予定です。この型は3級以上で必要です。',
-    },
-    youtubeLinks: [],
-    steps: [],
-  },
-  {
-    id: 'kata-6',
-    japaneseCharacters: '形六',
-    romaji: 'Kata Roku',
-    name: { en: 'Kata 6', da: 'Kata 6', ja: '形六' },
-    description: {
-      en: 'Content coming soon. This kata is required from 2nd kyu onwards.',
-      da: 'Indhold kommer snart. Denne kata kræves fra 2. kyu og frem.',
-      ja: 'コンテンツは近日公開予定です。この型は2級以上で必要です。',
-    },
-    youtubeLinks: [],
-    steps: [],
-  },
-  {
-    id: 'kata-7',
-    japaneseCharacters: '形七',
-    romaji: 'Kata Shichi',
-    name: { en: 'Kata 7', da: 'Kata 7', ja: '形七' },
-    description: {
-      en: 'Content coming soon. This kata is required from 1st kyu onwards.',
-      da: 'Indhold kommer snart. Denne kata kræves fra 1. kyu og frem.',
-      ja: 'コンテンツは近日公開予定です。この型は1級以上で必要です。',
-    },
-    youtubeLinks: [],
-    steps: [],
-  },
+  nageKataSan,
+  kumiteKataSan,
+  jissenKataIchi,
+  nageKataYon,
+  kumiteKataYon,
+  kumiteKataGo,
+  jissenKataNi,
 ];
 
 export function getKataById(id: string): Kata | undefined {
