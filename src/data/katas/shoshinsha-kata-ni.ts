@@ -15,7 +15,7 @@ export const shoshinshaKataNi: Kata = {
     da: 'Shoshinsha no Kata Sono Ni bygger på den første begynderform ved at introducere kombinationskontraer inklusive hook og uppercut slag. Frontspark bruges nu som det primære angreb, og forsvareren svarer med flertekniske kontrasekvenser.',
     ja: '初心者の形二は最初の初心者形の上に構築され、フックやアッパーカットを含む連続カウンターを導入します。前蹴りが主要な攻撃として使われ、防御者は複数の技によるカウンター連続で応じます。',
   },
-  youtubeLinks: [{ label: 'Kata playlist — Sensei Mazz', url: 'https://www.youtube.com/playlist?list=PL70F81BEA6E5A5663' }],
+  youtubeLinks: [{ label: 'Shoshinsha no Kata Sono Ni — Sensei Mazz', url: 'https://youtu.be/gR0szTP1Fp0' }],
   steps: [
     {
       stepNumber: 1,
