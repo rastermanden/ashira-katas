@@ -1,9 +1,11 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { kyuLevels } from '@/data/kyu';
+import { danLevels } from '@/data/dan';
 import { allKatas } from '@/data/katas';
 import type { Locale } from '@/data/types';
 import { routing } from '@/i18n/routing';
+import { getBeltStyle } from '@/lib/belt';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -20,18 +22,6 @@ function buildPensumTable() {
     .sort((a, b) => b.firstKyu - a.firstKyu); // 10 → 9 → … → 1
 }
 
-const beltColorHex: Record<string, string> = {
-  'bg-white border border-gray-300': '#FFFFFF',
-  'bg-yellow-400': '#FACC15',
-  'bg-orange-500': '#F97316',
-  'bg-blue-500': '#3B82F6',
-  'bg-green-500': '#22C55E',
-  'bg-purple-500': '#A855F7',
-  'bg-amber-800': '#92400E',
-  'bg-amber-900': '#78350F',
-  'bg-stone-700': '#44403C',
-  'bg-stone-800': '#292524',
-};
 
 export default async function HomePage({
   params,
@@ -72,7 +62,6 @@ export default async function HomePage({
             </thead>
             <tbody>
               {pensum.map(({ kata, kyu }, i) => {
-                const hex = beltColorHex[kyu.beltTailwindColor] ?? '#888';
                 const isComplete = kata.steps.length > 0;
                 return (
                   <tr
@@ -84,10 +73,7 @@ export default async function HomePage({
                       <Link href={`/kyu/${kyu.level}`} className="flex items-center gap-2 group">
                         <span
                           className="inline-block h-4 w-8 rounded-sm flex-shrink-0 shadow-sm"
-                          style={{
-                            backgroundColor: hex,
-                            border: hex === '#FFFFFF' ? '1px solid #e5e7eb' : 'none',
-                          }}
+                          style={getBeltStyle(kyu)}
                         />
                         <span className="text-gray-600 group-hover:text-ashihara-red transition-colors whitespace-nowrap text-xs">
                           {kyu.name[l]}
@@ -121,11 +107,10 @@ export default async function HomePage({
       </section>
 
       {/* Kyu level cards */}
-      <section>
+      <section className="mb-10">
         <h2 className="text-xl font-bold text-gray-800 mb-2">{t('selectKyu')}</h2>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {kyuLevels.map((kyu) => {
-            const hex = beltColorHex[kyu.beltTailwindColor] ?? '#888';
             const katas = allKatas.filter((k) => k.requiredForKyu.includes(kyu.level));
             return (
               <Link
@@ -135,7 +120,7 @@ export default async function HomePage({
               >
                 <span
                   className="flex-shrink-0 h-8 w-3 rounded-sm shadow-sm"
-                  style={{ backgroundColor: hex, border: hex === '#FFFFFF' ? '1px solid #e5e7eb' : 'none' }}
+                  style={getBeltStyle(kyu)}
                 />
                 <div className="min-w-0 flex-1">
                   <p className="font-semibold text-gray-800 text-sm japanese-text">{kyu.name[l]}</p>
@@ -145,6 +130,28 @@ export default async function HomePage({
               </Link>
             );
           })}
+        </div>
+      </section>
+
+      {/* Dan level cards */}
+      <section>
+        <h2 className="text-xl font-bold text-gray-800 mb-2">Dan</h2>
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {danLevels.map((dan) => (
+            <div
+              key={dan.level}
+              className="flex items-center gap-3 bg-white rounded-xl border border-gray-200 shadow-sm px-4 py-3 overflow-hidden"
+            >
+              <span
+                className="flex-shrink-0 h-8 w-3 rounded-sm shadow-sm"
+                style={getBeltStyle(dan)}
+              />
+              <div className="min-w-0 flex-1">
+                <p className="font-semibold text-gray-800 text-sm japanese-text">{dan.name[l]}</p>
+                <p className="text-xs text-gray-400 japanese-text">{dan.japaneseNumeral}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
     </div>
