@@ -17,8 +17,18 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'nav' });
+  const siteTitle = t('siteTitle');
+
+  // On PR preview builds the workflow passes the PR number (and title) so the
+  // browser tab is distinguishable from the production site. See preview.yml.
+  const prNumber = process.env.PR_NUMBER;
+  const prTitle = process.env.PR_TITLE;
+  const title = prNumber
+    ? `[PR #${prNumber}] ${prTitle ? `${prTitle} · ` : ''}${siteTitle}`
+    : siteTitle;
+
   return {
-    title: t('siteTitle'),
+    title,
     description: 'Ashihara Karate Kata Guide — multilingual step-by-step reference',
   };
 }
