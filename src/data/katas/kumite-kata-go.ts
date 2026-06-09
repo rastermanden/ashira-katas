@@ -15,7 +15,7 @@ export const kumiteKataGo: Kata = {
     da: 'Kumite no Kata Sono Go er den mest avancerede kampform med komplekse fler-spark-kombinationer, kroglekick (kake-geri) og integration af vristen-blokke med samtidige kontra-spark. Kataen inkluderer ura-nage mod frontspark-indgange med okuri ashi fremrykning.',
     ja: '組手の形五は最も高度な組手型で、複雑な複数蹴り連続技、フック蹴り（かけ蹴り）、甲受けと同時カウンター蹴りの統合が特徴です。前蹴り入り身に対する裏投げと送り足を伴う前進が含まれます。',
   },
-  youtubeLinks: [{ label: 'Kata playlist — Sensei Mazz', url: 'https://www.youtube.com/playlist?list=PL70F81BEA6E5A5663' }],
+  youtubeLinks: [{ label: 'Kumite no Kata Sono Go — Sensei Mazz', url: 'https://youtu.be/nK0PZcs2M_A' }],
   steps: [
     {
       stepNumber: 1,

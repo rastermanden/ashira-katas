@@ -15,7 +15,7 @@ export const kumiteKataNi: Kata = {
     da: 'Kumite no Kata Sono Ni bygger videre på den første kampform ved at tilføje udvidede kontrasekvenser inklusive dobbelt knæspark og spinning-bagspark. Kataen udvikler flow og kontinuitet efter den første defensive reaktion.',
     ja: '組手の形二は最初の組手型の上に構築され、二連膝蹴りや回転後ろ蹴りを含む長い連続カウンターを加えます。この型は最初の防御反応の後のフローと連続性を発展させます。',
   },
-  youtubeLinks: [{ label: 'Kata playlist — Sensei Mazz', url: 'https://www.youtube.com/playlist?list=PL70F81BEA6E5A5663' }],
+  youtubeLinks: [{ label: 'Kumite no Kata Sono Ni — Sensei Mazz', url: 'https://youtu.be/mMn65NMnTts' }],
   steps: [
     {
       stepNumber: 1,

@@ -15,7 +15,7 @@ export const nageKataIchi: Kata = {
     da: 'Nage no Kata Sono Ichi introducerer de grundlæggende kasteteknikprincipper i Ashihara Karate. Kerneteknikken er maki komi nage (omviklingskast) mod rundkick og ura-nage (bagkast) mod frontspark ved brug af krydstrin (cross okuri ashi) indgang. Kubi-nage (halskast) introduceres også.',
     ja: '投げの形一はアシハラ空手の基本的な投げの原則を導入します。核心技術は回し蹴りに対する巻き込み投げと、クロスステップ（クロス送り足）の入り身を使った前蹴りに対する裏投げです。首投げも導入されます。',
   },
-  youtubeLinks: [{ label: 'Kata playlist — Sensei Mazz', url: 'https://www.youtube.com/playlist?list=PL70F81BEA6E5A5663' }],
+  youtubeLinks: [{ label: 'Nage no Kata Sono Ichi — Sensei Mazz', url: 'https://youtu.be/HiKglOIGow8' }],
   steps: [
     {
       stepNumber: 1,

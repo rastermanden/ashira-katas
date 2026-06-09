@@ -15,7 +15,7 @@ export const jissenKataIchi: Kata = {
     da: 'Jissen no Kata Sono Ichi lægger vægt på nærkamp med indvendige (irimi) blokke og øjeblikkelige albue- eller stødkontraer. Kataen udvikler hurtige kombinationer efter at være trængt ind bag modstanderens forsvar, med shinelbue-blokke (hiji/sune-uke) mod spark og afslutning med maki komi nage eller hikikuzushi.',
     ja: '実戦の形一は内側（入り身）ブロックと即時の肘打ちや突きカウンターによる接近戦を強調します。この型は相手のガードの内側に入った後の素早い連続技を発展させ、蹴りに対する肘/脛受け（hiji/sune-uke）を組み込み、巻き込み投げや引き崩しで締めくくります。',
   },
-  youtubeLinks: [{ label: 'Kata playlist — Sensei Mazz', url: 'https://www.youtube.com/playlist?list=PL70F81BEA6E5A5663' }],
+  youtubeLinks: [{ label: 'Jissen no Kata Sono Ichi — Sensei Mazz', url: 'https://youtu.be/h0GXb_sOB7g' }],
   steps: [
     {
       stepNumber: 1,

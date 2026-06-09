@@ -15,7 +15,7 @@ export const kihonKataIchi: Kata = {
     da: 'Kihon no Kata Sono Ichi lægger vægt på at træde til siden (hiki ashi og sideskridt). Begreberne Irimi (indgang) og Kyushu (absorption) introduceres. Teknikker bygger videre på Shoshinsha-kataen og inkorporerer nu mere dynamiske kontraer.',
     ja: '基本形一は横への足踏み（引き足とサイドステップ）を強調します。入り身（Irimi）と吸収（Kyushu）の概念が導入されます。技術は初心者の形の上に構築され、より動的なカウンターを組み込みます。',
   },
-  youtubeLinks: [{ label: 'Kata playlist — Sensei Mazz', url: 'https://www.youtube.com/playlist?list=PL70F81BEA6E5A5663' }],
+  youtubeLinks: [{ label: 'Kihon no Kata Sono Ichi — Sensei Mazz', url: 'https://youtu.be/GOp_FB7DK7A' }],
   steps: [
     {
       stepNumber: 1,

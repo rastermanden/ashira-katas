@@ -15,7 +15,7 @@ export const jissenKataNi: Kata = {
     da: 'Jissen no Kata Sono Ni bygger videre på den første kampform ved at introducere sankaku-geri (trekantspark / spinningkick) og en udvidet kombination inklusive hikitaoshi. Kataen udvikler sideskridt-indgange med indvendig uchi-uke shuto og cross okuri ashi til kast.',
     ja: '実戦の形二は最初の実戦型の上に構築され、三角蹴り（スピニングキック）と引き倒しを含む長い連続技を導入します。この型は内側の内受け手刀と投げのためのクロス送り足を使ったサイドステップ入り身を発展させます。',
   },
-  youtubeLinks: [{ label: 'Kata playlist — Sensei Mazz', url: 'https://www.youtube.com/playlist?list=PL70F81BEA6E5A5663' }],
+  youtubeLinks: [{ label: 'Jissen no Kata Sono Ni — Sensei Mazz', url: 'https://youtu.be/4eInvivg6aA' }],
   steps: [
     {
       stepNumber: 1,

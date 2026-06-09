@@ -15,7 +15,7 @@ export const nageKataYon: Kata = {
     da: 'Nage no Kata Sono Yon er den mest avancerede kastform, der bruger albue/skinnebensblokke (hiji/sune-uke) mod rundkick og inkorporerer sanbon-tsuki (tre-stødskombination) inden kast. Trin 6 vender kortvarigt tilbage til kumite no kamae midt i kataen, og kasterne kulminerer med hikitaoshi-afslutninger.',
     ja: '投げの形四は最も高度な投げ型で、回し蹴りに対する肘/脛受け（hiji/sune-uke）を使用し、投げの前に三本突き（三回の突きの組み合わせ）を組み込みます。ステップ6は型の途中で一時的に組手の構えに戻り、投げは引き倒しで締めくくられます。',
   },
-  youtubeLinks: [{ label: 'Kata playlist — Sensei Mazz', url: 'https://www.youtube.com/playlist?list=PL70F81BEA6E5A5663' }],
+  youtubeLinks: [{ label: 'Nage no Kata Sono Yon — Sensei Mazz', url: 'https://youtu.be/br3owfgrPXM' }],
   steps: [
     {
       stepNumber: 1,

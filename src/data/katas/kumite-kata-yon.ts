@@ -15,7 +15,7 @@ export const kumiteKataYon: Kata = {
     da: 'Kumite no Kata Sono Yon er en avanceret kampform, der inkorporerer hoppende spinningkick (tobi-geri) og udvidede kombinationssekvenser. Kataen kræver præcision i udførelsen af hikikuzushi (ubalancering) og sofistikerede indgange til kastteknikker.',
     ja: '組手の形四は跳び蹴り（tobi-geri）や長い連続技を取り入れた高度な組手型です。この型は引き崩し（バランス崩し）の精度と投げ技への高度な入り方を要求します。',
   },
-  youtubeLinks: [{ label: 'Kata playlist — Sensei Mazz', url: 'https://www.youtube.com/playlist?list=PL70F81BEA6E5A5663' }],
+  youtubeLinks: [{ label: 'Kumite no Kata Sono Yon — Sensei Mazz', url: 'https://youtu.be/uEtXIV4wd1o' }],
   steps: [
     {
       stepNumber: 1,

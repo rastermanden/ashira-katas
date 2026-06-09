@@ -15,7 +15,7 @@ export const kumiteKataSan: Kata = {
     da: 'Kumite no Kata Sono San introducerer stopping-teknikker mod nedre spark og kombinationsangreb (mae-geri + tsuki). Kastteknikker som ura-nage (bagkast) optræder fremtrædende, og kataen udvikler brugen af akselbens-kontraer (jikuashi).',
     ja: '組手の形三は下段蹴りや連続攻撃（前蹴り＋突き）に対するストッピング技術を導入します。裏投げ（後ろ投げ）などの投げ技が多く登場し、軸足カウンターの使い方を発展させます。',
   },
-  youtubeLinks: [{ label: 'Kata playlist — Sensei Mazz', url: 'https://www.youtube.com/playlist?list=PL70F81BEA6E5A5663' }],
+  youtubeLinks: [{ label: 'Kumite no Kata Sono San — Sensei Mazz', url: 'https://youtu.be/4o0EoCJ6aBY' }],
   steps: [
     {
       stepNumber: 1,

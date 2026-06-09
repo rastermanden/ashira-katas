@@ -15,7 +15,7 @@ export const kihonKataSan: Kata = {
     da: 'Kihon no Kata Sono San introducerer avancerede spark-angreb inklusive jodan ushiro mawashi-geri (øvre bagkick), ushiro-geri (bagspark) og san kaku-geri (trekantspark). Kataen udvikler kyushu-skridt-indgange mod spark og udvider kontra-sekvenser med ushiro mawari tettsui (spinninghammernæve).',
     ja: '基本形三は上段後ろ回し蹴り、後ろ蹴り、三角蹴りなどの高度な蹴り攻撃を導入します。この型は蹴りに対するキュウシュウステップの入り方を発展させ、後ろ回り鉄槌によるカウンター連続を拡張します。',
   },
-  youtubeLinks: [{ label: 'Kata playlist — Sensei Mazz', url: 'https://www.youtube.com/playlist?list=PL70F81BEA6E5A5663' }],
+  youtubeLinks: [{ label: 'Kihon no Kata Sono San — Sensei Mazz', url: 'https://youtu.be/sxz-ujyWdyo' }],
   steps: [
     {
       stepNumber: 1,

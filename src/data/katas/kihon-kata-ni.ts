@@ -15,7 +15,7 @@ export const kihonKataNi: Kata = {
     da: 'Kihon no Kata Sono Ni bygger videre på den første grundform ved at introducere yoko-geri (sidekick) og yderligere udvide kontra-kombinationer. Kataen udvikler brugen af fod-skift og nærkamps kombinationsopfølgninger efter blokering.',
     ja: '基本形二は最初の基本形の上に構築され、横蹴り（側面蹴り）を導入し、カウンターの組み合わせをさらに拡張します。この型はフットスイッチの使い方とブロック後の接近戦での連続技を発展させます。',
   },
-  youtubeLinks: [{ label: 'Kata playlist — Sensei Mazz', url: 'https://www.youtube.com/playlist?list=PL70F81BEA6E5A5663' }],
+  youtubeLinks: [{ label: 'Kihon no Kata Sono Ni — Sensei Mazz', url: 'https://youtu.be/WDJ1XaF7T28' }],
   steps: [
     {
       stepNumber: 1,
