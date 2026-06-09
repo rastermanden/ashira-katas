@@ -36,6 +36,8 @@ jobs:
         run: npm run build
         env:
           BASE_PATH: /ashira-katas/pr-preview/pr-${{ github.event.number }}
+          PR_NUMBER: ${{ github.event.number }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
 
       - name: Add .nojekyll to build output
         if: github.event.action != 'closed'

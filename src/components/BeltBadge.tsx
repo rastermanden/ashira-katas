@@ -1,4 +1,5 @@
 import type { KyuLevel } from '@/data/types';
+import { getBeltStyle } from '@/lib/belt';
 
 interface BeltBadgeProps {
   kyu: KyuLevel;
@@ -15,7 +16,8 @@ export default function BeltBadge({ kyu, size = 'md' }: BeltBadgeProps) {
   return (
     <div className="flex items-center gap-2">
       <div
-        className={`${sizeClasses[size]} rounded-sm ${kyu.beltTailwindColor} shadow-sm`}
+        className={`${sizeClasses[size]} rounded-sm shadow-sm`}
+        style={getBeltStyle(kyu)}
         title={`Belt colour for ${kyu.name.en}`}
       />
       <span className={`font-semibold ${size === 'lg' ? 'text-base' : 'text-sm'} text-gray-700`}>
