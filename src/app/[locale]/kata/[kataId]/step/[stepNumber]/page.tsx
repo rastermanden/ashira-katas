@@ -47,8 +47,7 @@ export default async function StepPage({
     <div>
       {/* Back link */}
       <Link
-        href={`/${locale}/kata/${kata.id}`}
-        locale={l}
+        href={`/kata/${kata.id}`}
         className="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-ashihara-red transition-colors mb-6"
       >
         {t('backToKata')}
@@ -57,7 +56,7 @@ export default async function StepPage({
       {/* Kata + step header */}
       <div className="mb-6">
         <p className="text-xs text-gray-400 mb-1">
-          <span className="japanese-text">{kata.japaneseCharacters}</span>{' '}
+          <span className="japanese-text">{kata.japaneseCharacters}</span>
           <span className="mx-1">—</span>
           <span className="italic">{kata.romaji}</span>
         </p>
@@ -69,15 +68,13 @@ export default async function StepPage({
 
       {/* Step navigation — top */}
       <StepNav
-        locale={locale}
         kataId={kata.id}
         prevStep={prevStep?.stepNumber}
         nextStep={nextStep?.stepNumber}
-        prevLabel={prevStep ? `${t('previous')} — ${prevStep.name[l]}` : undefined}
-        nextLabel={nextStep ? `${nextStep.name[l]} — ${t('next')}` : undefined}
+        prevLabel={prevStep ? prevStep.name[l] : undefined}
+        nextLabel={nextStep ? nextStep.name[l] : undefined}
         tPrev={t('previous')}
         tNext={t('next')}
-        l={l}
       />
 
       {/* Content grid */}
@@ -165,15 +162,13 @@ export default async function StepPage({
       {/* Step navigation — bottom */}
       <div className="mt-10 pt-6 border-t border-gray-200">
         <StepNav
-          locale={locale}
           kataId={kata.id}
           prevStep={prevStep?.stepNumber}
           nextStep={nextStep?.stepNumber}
-          prevLabel={prevStep ? `${prevStep.name[l]}` : undefined}
-          nextLabel={nextStep ? `${nextStep.name[l]}` : undefined}
+          prevLabel={prevStep ? prevStep.name[l] : undefined}
+          nextLabel={nextStep ? nextStep.name[l] : undefined}
           tPrev={t('previous')}
           tNext={t('next')}
-          l={l}
         />
       </div>
     </div>
@@ -181,7 +176,6 @@ export default async function StepPage({
 }
 
 function StepNav({
-  locale,
   kataId,
   prevStep,
   nextStep,
@@ -189,9 +183,7 @@ function StepNav({
   nextLabel,
   tPrev,
   tNext,
-  l,
 }: {
-  locale: string;
   kataId: string;
   prevStep?: number;
   nextStep?: number;
@@ -199,15 +191,13 @@ function StepNav({
   nextLabel?: string;
   tPrev: string;
   tNext: string;
-  l: Locale;
 }) {
   return (
     <div className="flex items-center justify-between gap-4">
       <div className="flex-1">
         {prevStep !== undefined ? (
           <Link
-            href={`/${locale}/kata/${kataId}/step/${prevStep}`}
-            locale={l}
+            href={`/kata/${kataId}/step/${prevStep}`}
             className="group inline-flex flex-col items-start bg-white border border-gray-200 hover:border-ashihara-gold rounded-xl px-5 py-3 shadow-sm hover:shadow-md transition-all duration-200 max-w-xs"
           >
             <span className="text-xs text-gray-400 group-hover:text-ashihara-gold transition-colors">
@@ -225,8 +215,7 @@ function StepNav({
       <div className="flex-1 flex justify-end">
         {nextStep !== undefined ? (
           <Link
-            href={`/${locale}/kata/${kataId}/step/${nextStep}`}
-            locale={l}
+            href={`/kata/${kataId}/step/${nextStep}`}
             className="group inline-flex flex-col items-end bg-ashihara-gold hover:bg-yellow-500 border border-ashihara-gold rounded-xl px-5 py-3 shadow-sm hover:shadow-md transition-all duration-200 max-w-xs"
           >
             <span className="text-xs text-ashihara-dark/70">

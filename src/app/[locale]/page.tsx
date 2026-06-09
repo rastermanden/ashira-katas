@@ -56,8 +56,7 @@ export default async function HomePage({
             return (
               <Link
                 key={kyu.level}
-                href={`/${locale}/kyu/${kyu.level}`}
-                locale={l}
+                href={`/kyu/${kyu.level}`}
                 className="group block bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md hover:border-ashihara-gold transition-all duration-200 overflow-hidden"
               >
                 {/* Belt colour stripe */}

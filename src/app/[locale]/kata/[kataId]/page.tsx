@@ -37,8 +37,7 @@ export default async function KataPage({
   return (
     <div>
       <Link
-        href={`/${locale}`}
-        locale={l}
+        href="/"
         className="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-ashihara-red transition-colors mb-6"
       >
         {t('backToKyu')}
@@ -84,8 +83,7 @@ export default async function KataPage({
                 {kata.steps.map((step) => (
                   <Link
                     key={step.stepNumber}
-                    href={`/${locale}/kata/${kata.id}/step/${step.stepNumber}`}
-                    locale={l}
+                    href={`/kata/${kata.id}/step/${step.stepNumber}`}
                     className="group flex items-center gap-4 bg-white rounded-xl border border-gray-200 hover:border-ashihara-gold hover:shadow-md transition-all duration-200 p-4"
                   >
                     <span className="flex-shrink-0 w-10 h-10 rounded-full bg-stone-100 text-stone-600 flex items-center justify-center font-bold text-sm group-hover:bg-ashihara-gold group-hover:text-white transition-colors">
@@ -116,8 +114,7 @@ export default async function KataPage({
               {requiredForKyu.map((kyu) => (
                 <Link
                   key={kyu.level}
-                  href={`/${locale}/kyu/${kyu.level}`}
-                  locale={l}
+                  href={`/kyu/${kyu.level}`}
                   className="flex items-center gap-2 group"
                 >
                   <div className={`h-3 w-12 rounded-sm ${kyu.beltTailwindColor} flex-shrink-0`} />

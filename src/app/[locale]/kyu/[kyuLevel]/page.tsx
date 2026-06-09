@@ -35,8 +35,7 @@ export default async function KyuPage({
   return (
     <div>
       <Link
-        href={`/${locale}`}
-        locale={l}
+        href="/"
         className="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-ashihara-red transition-colors mb-6"
       >
         {t('backToHome')}
@@ -44,9 +43,7 @@ export default async function KyuPage({
 
       {/* Header */}
       <div className="flex items-center gap-4 mb-8">
-        <div
-          className={`h-10 w-4 rounded-sm ${kyu.beltTailwindColor} shadow-md flex-shrink-0`}
-        />
+        <div className={`h-10 w-4 rounded-sm ${kyu.beltTailwindColor} shadow-md flex-shrink-0`} />
         <div>
           <h1 className="text-2xl font-bold text-gray-900 japanese-text">{kyu.name[l]}</h1>
           <p className="text-sm text-gray-500">{kyu.japaneseNumeral}</p>
@@ -64,8 +61,7 @@ export default async function KyuPage({
             return (
               <Link
                 key={kata.id}
-                href={`/${locale}/kata/${kata.id}`}
-                locale={l}
+                href={`/kata/${kata.id}`}
                 className={`group block bg-white rounded-xl border shadow-sm transition-all duration-200 overflow-hidden ${
                   isComplete
                     ? 'border-gray-200 hover:border-ashihara-gold hover:shadow-md'
