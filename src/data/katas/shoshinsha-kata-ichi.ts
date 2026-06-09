@@ -17,7 +17,7 @@ export const shoshinshaKataIchi: Kata = {
   },
   youtubeLinks: [
     { label: 'Shoshinsha no Kata Sono Ichi — Sensei Mazz', url: 'https://youtu.be/npTj8t4i8wU' },
-    { label: 'Shoshinsha no Kata Sono Ichi (2) — Sensei Mazz', url: 'https://youtu.be/FI3STJZynlU' },
+    { label: 'Shoshinsha no Kata Sono Ichi (attacker) — Sensei Mazz', url: 'https://youtu.be/FI3STJZynlU' },
   ],
   steps: [
     {
