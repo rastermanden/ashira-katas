@@ -1,4 +1,5 @@
 import type { LocalizedString } from './types';
+import requirementsData from './requirements.json';
 
 /**
  * A single kata that a kyu grading requires, with an optional annotation
@@ -22,111 +23,12 @@ export interface KyuRequirement {
 
 /**
  * Single source of truth for which katas each kyu grading requires.
- * Cumulative: higher kyu numbers (earlier belts) require fewer katas, and
- * each step down the ranks adds the next kata to the pensum.
+ * The data lives in `requirements.json` so it can be edited without touching
+ * code; this re-exports it as a typed value. Cumulative: higher kyu numbers
+ * (earlier belts) require fewer katas, and each step down the ranks adds the
+ * next kata to the pensum.
  */
-export const kataRequirements: KyuRequirement[] = [
-  {
-    kyuLevel: 10,
-    katas: [{ kataId: 'kihon-kata-ichi' }],
-  },
-  {
-    kyuLevel: 9,
-    katas: [{ kataId: 'kihon-kata-ichi' }, { kataId: 'kihon-kata-ni' }],
-  },
-  {
-    kyuLevel: 8,
-    katas: [
-      { kataId: 'kihon-kata-ichi' },
-      { kataId: 'kihon-kata-ni' },
-      { kataId: 'kihon-kata-san' },
-    ],
-  },
-  {
-    kyuLevel: 7,
-    katas: [
-      { kataId: 'kihon-kata-ichi' },
-      { kataId: 'kihon-kata-ni' },
-      { kataId: 'kihon-kata-san' },
-      { kataId: 'kata-1' },
-    ],
-  },
-  {
-    kyuLevel: 6,
-    katas: [
-      { kataId: 'kihon-kata-ichi' },
-      { kataId: 'kihon-kata-ni' },
-      { kataId: 'kihon-kata-san' },
-      { kataId: 'kata-1' },
-      { kataId: 'kata-2' },
-    ],
-  },
-  {
-    kyuLevel: 5,
-    katas: [
-      { kataId: 'kihon-kata-ichi' },
-      { kataId: 'kihon-kata-ni' },
-      { kataId: 'kihon-kata-san' },
-      { kataId: 'kata-1' },
-      { kataId: 'kata-2' },
-      { kataId: 'kata-3' },
-    ],
-  },
-  {
-    kyuLevel: 4,
-    katas: [
-      { kataId: 'kihon-kata-ichi' },
-      { kataId: 'kihon-kata-ni' },
-      { kataId: 'kihon-kata-san' },
-      { kataId: 'kata-1' },
-      { kataId: 'kata-2' },
-      { kataId: 'kata-3' },
-      { kataId: 'kata-4' },
-    ],
-  },
-  {
-    kyuLevel: 3,
-    katas: [
-      { kataId: 'kihon-kata-ichi' },
-      { kataId: 'kihon-kata-ni' },
-      { kataId: 'kihon-kata-san' },
-      { kataId: 'kata-1' },
-      { kataId: 'kata-2' },
-      { kataId: 'kata-3' },
-      { kataId: 'kata-4' },
-      { kataId: 'kata-5' },
-    ],
-  },
-  {
-    kyuLevel: 2,
-    katas: [
-      { kataId: 'kihon-kata-ichi' },
-      { kataId: 'kihon-kata-ni' },
-      { kataId: 'kihon-kata-san' },
-      { kataId: 'kata-1' },
-      { kataId: 'kata-2' },
-      { kataId: 'kata-3' },
-      { kataId: 'kata-4' },
-      { kataId: 'kata-5' },
-      { kataId: 'kata-6' },
-    ],
-  },
-  {
-    kyuLevel: 1,
-    katas: [
-      { kataId: 'kihon-kata-ichi' },
-      { kataId: 'kihon-kata-ni' },
-      { kataId: 'kihon-kata-san' },
-      { kataId: 'kata-1' },
-      { kataId: 'kata-2' },
-      { kataId: 'kata-3' },
-      { kataId: 'kata-4' },
-      { kataId: 'kata-5' },
-      { kataId: 'kata-6' },
-      { kataId: 'kata-7' },
-    ],
-  },
-];
+export const kataRequirements: KyuRequirement[] = requirementsData.kyuRequirements;
 
 /** The requirement entry for a single kyu level, if it exists. */
 export function getRequirementForKyu(level: number): KyuRequirement | undefined {
