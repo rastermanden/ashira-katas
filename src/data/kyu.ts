@@ -1,0 +1,98 @@
+import type { KyuLevel } from './types';
+
+export const kyuLevels: KyuLevel[] = [
+  {
+    level: 10,
+    japaneseNumeral: '十級',
+    beltColor: '#FFFFFF',
+    beltTailwindColor: 'bg-white border border-gray-300',
+    beltTextColor: 'text-gray-800',
+    name: { en: '10th Kyu', da: '10. kyu', ja: '十級' },
+    requiredKataIds: ['kihon-kata-ichi'],
+  },
+  {
+    level: 9,
+    japaneseNumeral: '九級',
+    beltColor: '#FACC15',
+    beltTailwindColor: 'bg-yellow-400',
+    beltTextColor: 'text-gray-900',
+    name: { en: '9th Kyu', da: '9. kyu', ja: '九級' },
+    requiredKataIds: ['kihon-kata-ichi', 'kihon-kata-ni'],
+  },
+  {
+    level: 8,
+    japaneseNumeral: '八級',
+    beltColor: '#F97316',
+    beltTailwindColor: 'bg-orange-500',
+    beltTextColor: 'text-white',
+    name: { en: '8th Kyu', da: '8. kyu', ja: '八級' },
+    requiredKataIds: ['kihon-kata-ichi', 'kihon-kata-ni', 'kihon-kata-san'],
+  },
+  {
+    level: 7,
+    japaneseNumeral: '七級',
+    beltColor: '#3B82F6',
+    beltTailwindColor: 'bg-blue-500',
+    beltTextColor: 'text-white',
+    name: { en: '7th Kyu', da: '7. kyu', ja: '七級' },
+    requiredKataIds: ['kihon-kata-ichi', 'kihon-kata-ni', 'kihon-kata-san', 'kata-1'],
+  },
+  {
+    level: 6,
+    japaneseNumeral: '六級',
+    beltColor: '#22C55E',
+    beltTailwindColor: 'bg-green-500',
+    beltTextColor: 'text-white',
+    name: { en: '6th Kyu', da: '6. kyu', ja: '六級' },
+    requiredKataIds: ['kihon-kata-ichi', 'kihon-kata-ni', 'kihon-kata-san', 'kata-1', 'kata-2'],
+  },
+  {
+    level: 5,
+    japaneseNumeral: '五級',
+    beltColor: '#A855F7',
+    beltTailwindColor: 'bg-purple-500',
+    beltTextColor: 'text-white',
+    name: { en: '5th Kyu', da: '5. kyu', ja: '五級' },
+    requiredKataIds: ['kihon-kata-ichi', 'kihon-kata-ni', 'kihon-kata-san', 'kata-1', 'kata-2', 'kata-3'],
+  },
+  {
+    level: 4,
+    japaneseNumeral: '四級',
+    beltColor: '#92400E',
+    beltTailwindColor: 'bg-amber-800',
+    beltTextColor: 'text-white',
+    name: { en: '4th Kyu', da: '4. kyu', ja: '四級' },
+    requiredKataIds: ['kihon-kata-ichi', 'kihon-kata-ni', 'kihon-kata-san', 'kata-1', 'kata-2', 'kata-3', 'kata-4'],
+  },
+  {
+    level: 3,
+    japaneseNumeral: '三級',
+    beltColor: '#78350F',
+    beltTailwindColor: 'bg-amber-900',
+    beltTextColor: 'text-white',
+    name: { en: '3rd Kyu', da: '3. kyu', ja: '三級' },
+    requiredKataIds: ['kihon-kata-ichi', 'kihon-kata-ni', 'kihon-kata-san', 'kata-1', 'kata-2', 'kata-3', 'kata-4', 'kata-5'],
+  },
+  {
+    level: 2,
+    japaneseNumeral: '二級',
+    beltColor: '#6B3A2A',
+    beltTailwindColor: 'bg-stone-700',
+    beltTextColor: 'text-white',
+    name: { en: '2nd Kyu', da: '2. kyu', ja: '二級' },
+    requiredKataIds: ['kihon-kata-ichi', 'kihon-kata-ni', 'kihon-kata-san', 'kata-1', 'kata-2', 'kata-3', 'kata-4', 'kata-5', 'kata-6'],
+  },
+  {
+    level: 1,
+    japaneseNumeral: '一級',
+    beltColor: '#4B2C1A',
+    beltTailwindColor: 'bg-stone-800',
+    beltTextColor: 'text-white',
+    name: { en: '1st Kyu', da: '1. kyu', ja: '一級' },
+    requiredKataIds: ['kihon-kata-ichi', 'kihon-kata-ni', 'kihon-kata-san', 'kata-1', 'kata-2', 'kata-3', 'kata-4', 'kata-5', 'kata-6', 'kata-7'],
+  },
+];
+
+export function getKyuByLevel(level: number): KyuLevel | undefined {
+  return kyuLevels.find((k) => k.level === level);
+}

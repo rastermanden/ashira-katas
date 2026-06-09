@@ -1,0 +1,55 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "kyu": "級レベル",
+    "kata": "型",
+    "siteTitle": "アシハラ空手 — 型ガイド"
+  },
+  "home": {
+    "title": "アシハラ空手",
+    "subtitle": "型ガイド",
+    "tagline": "白帯から黒帯まで、アシハラ空手の型をステップごとに解説します。",
+    "kyuOverview": "カリキュラム一覧",
+    "selectKyu": "級レベル別に見る",
+    "belt": "帯",
+    "requiredKata": "型"
+  },
+  "kyu": {
+    "title": "{kyuName} — 必要な型",
+    "beltColor": "帯の色",
+    "kataRequired": "このレベルに必要な型",
+    "steps": "{count}手",
+    "viewKata": "型を見る",
+    "backToHome": "← 全級レベル"
+  },
+  "kata": {
+    "overview": "概要",
+    "steps": "手順",
+    "stepCount": "{count}手",
+    "viewStep": "第{number}手",
+    "youtubeLinks": "動画参考",
+    "noVideo": "まだ動画はありません",
+    "backToKyu": "← 戻る",
+    "backToKata": "← 型の概要",
+    "required": "必要な級",
+    "comingSoon": "近日公開予定"
+  },
+  "step": {
+    "attacker": "攻撃者",
+    "defender": "防御者",
+    "technicalNotes": "技術的な注意点",
+    "schoolVariations": "流派による違い",
+    "video": "動画",
+    "image": "イラスト",
+    "noImage": "イラストは近日公開予定",
+    "stepOf": "第{current}手（全{total}手）",
+    "previous": "← 前の手",
+    "next": "次の手 →",
+    "backToKata": "← 型の概要に戻る"
+  },
+  "language": {
+    "en": "英語",
+    "da": "デンマーク語",
+    "ja": "日本語"
+  }
+}

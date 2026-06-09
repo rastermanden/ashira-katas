@@ -1,0 +1,55 @@
+{
+  "nav": {
+    "home": "Forside",
+    "kyu": "Kyu-niveauer",
+    "kata": "Kata",
+    "siteTitle": "Ashihara Karate — Kata-guide"
+  },
+  "home": {
+    "title": "Ashihara Karate",
+    "subtitle": "Kata-guide",
+    "tagline": "En trin-for-trin reference til Ashihara Karate kata, fra hvidt bælte til sort bælte.",
+    "kyuOverview": "Pensumoversigt",
+    "selectKyu": "Gennemse efter kyu-niveau",
+    "belt": "Bælte",
+    "requiredKata": "Kata"
+  },
+  "kyu": {
+    "title": "{kyuName} — Påkrævet kata",
+    "beltColor": "Bæltefarve",
+    "kataRequired": "Kata påkrævet til dette niveau",
+    "steps": "{count} trin",
+    "viewKata": "Se kata",
+    "backToHome": "← Alle kyu-niveauer"
+  },
+  "kata": {
+    "overview": "Oversigt",
+    "steps": "Trin",
+    "stepCount": "{count} trin",
+    "viewStep": "Trin {number}",
+    "youtubeLinks": "Videoreferencer",
+    "noVideo": "Ingen videoer tilføjet endnu",
+    "backToKyu": "← Tilbage",
+    "backToKata": "← Kata-oversigt",
+    "required": "Påkrævet til",
+    "comingSoon": "Indhold kommer snart"
+  },
+  "step": {
+    "attacker": "Angriber",
+    "defender": "Forsvarer",
+    "technicalNotes": "Tekniske noter",
+    "schoolVariations": "Skole- / stilsvariation",
+    "video": "Video",
+    "image": "Illustration",
+    "noImage": "Illustration kommer snart",
+    "stepOf": "Trin {current} af {total}",
+    "previous": "← Forrige trin",
+    "next": "Næste trin →",
+    "backToKata": "← Tilbage til kata-oversigt"
+  },
+  "language": {
+    "en": "Engelsk",
+    "da": "Dansk",
+    "ja": "Japansk"
+  }
+}
