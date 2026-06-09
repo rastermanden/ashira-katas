@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { getKataById, allKatas } from '@/data/katas';
 import { kyuLevels } from '@/data/kyu';
+import { getKyusRequiringKata } from '@/data/requirements';
 import YouTubeEmbed from '@/components/YouTubeEmbed';
 import type { Locale } from '@/data/types';
 import { routing } from '@/i18n/routing';
@@ -31,7 +32,8 @@ export default async function KataPage({
   const t = await getTranslations('kata');
   const l = locale as Locale;
 
-  const requiredForKyu = kyuLevels.filter((k) => kata.requiredForKyu.includes(k.level));
+  const requiredKyuLevels = getKyusRequiringKata(kata.id);
+  const requiredForKyu = kyuLevels.filter((k) => requiredKyuLevels.includes(k.level));
   const hasSteps = kata.steps.length > 0;
 
   return (

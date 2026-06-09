@@ -2,7 +2,8 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { kyuLevels } from '@/data/kyu';
 import { danLevels } from '@/data/dan';
-import { allKatas } from '@/data/katas';
+import { allKatas, getKatasForKyu } from '@/data/katas';
+import { getKyusRequiringKata } from '@/data/requirements';
 import type { Locale } from '@/data/types';
 import { routing } from '@/i18n/routing';
 import { getBeltStyle } from '@/lib/belt';
@@ -15,10 +16,18 @@ export function generateStaticParams() {
 function buildPensumTable() {
   return allKatas
     .map((kata) => {
-      const firstKyu = Math.max(...kata.requiredForKyu);
-      const kyu = kyuLevels.find((k) => k.level === firstKyu)!;
-      return { kata, kyu, firstKyu };
+      const requiringKyus = getKyusRequiringKata(kata.id);
+      const firstKyu = requiringKyus.length > 0 ? Math.max(...requiringKyus) : null;
+      return { kata, firstKyu };
     })
+    .filter(
+      (row): row is { kata: (typeof allKatas)[number]; firstKyu: number } =>
+        row.firstKyu !== null,
+    )
+    .map((row) => ({
+      ...row,
+      kyu: kyuLevels.find((k) => k.level === row.firstKyu)!,
+    }))
     .sort((a, b) => b.firstKyu - a.firstKyu); // 10 → 9 → … → 1
 }
 
@@ -111,7 +120,7 @@ export default async function HomePage({
         <h2 className="text-xl font-bold text-gray-800 mb-2">{t('selectKyu')}</h2>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {kyuLevels.map((kyu) => {
-            const katas = allKatas.filter((k) => k.requiredForKyu.includes(kyu.level));
+            const katas = getKatasForKyu(kyu.level);
             return (
               <Link
                 key={kyu.level}

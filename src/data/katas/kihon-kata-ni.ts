@@ -9,7 +9,6 @@ export const kihonKataNi: Kata = {
     da: 'Grundform 2',
     ja: '基本形二',
   },
-  requiredForKyu: [9, 8, 7, 6, 5, 4, 3, 2, 1],
   description: {
     en: 'Kihon Kata Ni builds upon the first kata, introducing kicks (keri waza) into the defensive repertoire. The defender now uses leg techniques in combination with hand techniques, developing the coordination between upper and lower body that characterises advanced Ashihara movement.',
     da: 'Kihon Kata Ni bygger videre på den første kata og introducerer spark (keri waza) i forsvarsrepertoiret. Forsvareren bruger nu benteknikker i kombination med håndteknikker og udvikler koordinationen mellem over- og underkrop, der kendetegner avanceret Ashihara-bevægelse.',

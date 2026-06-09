@@ -8,7 +8,6 @@ export const kyuLevels: KyuLevel[] = [
     beltTailwindColor: 'bg-white border border-gray-300',
     beltTextColor: 'text-gray-800',
     name: { en: '10th Kyu', da: '10. kyu', ja: '十級' },
-    requiredKataIds: ['kihon-kata-ichi'],
   },
   {
     level: 9,
@@ -18,7 +17,6 @@ export const kyuLevels: KyuLevel[] = [
     beltTailwindColor: 'bg-white border border-gray-300',
     beltTextColor: 'text-gray-800',
     name: { en: '9th Kyu', da: '9. kyu', ja: '九級' },
-    requiredKataIds: ['kihon-kata-ichi', 'kihon-kata-ni'],
   },
   {
     level: 8,
@@ -27,7 +25,6 @@ export const kyuLevels: KyuLevel[] = [
     beltTailwindColor: 'bg-blue-500',
     beltTextColor: 'text-white',
     name: { en: '8th Kyu', da: '8. kyu', ja: '八級' },
-    requiredKataIds: ['kihon-kata-ichi', 'kihon-kata-ni', 'kihon-kata-san'],
   },
   {
     level: 7,
@@ -37,7 +34,6 @@ export const kyuLevels: KyuLevel[] = [
     beltTailwindColor: 'bg-blue-500',
     beltTextColor: 'text-white',
     name: { en: '7th Kyu', da: '7. kyu', ja: '七級' },
-    requiredKataIds: ['kihon-kata-ichi', 'kihon-kata-ni', 'kihon-kata-san', 'kata-1'],
   },
   {
     level: 6,
@@ -46,7 +42,6 @@ export const kyuLevels: KyuLevel[] = [
     beltTailwindColor: 'bg-yellow-400',
     beltTextColor: 'text-gray-900',
     name: { en: '6th Kyu', da: '6. kyu', ja: '六級' },
-    requiredKataIds: ['kihon-kata-ichi', 'kihon-kata-ni', 'kihon-kata-san', 'kata-1', 'kata-2'],
   },
   {
     level: 5,
@@ -56,7 +51,6 @@ export const kyuLevels: KyuLevel[] = [
     beltTailwindColor: 'bg-yellow-400',
     beltTextColor: 'text-gray-900',
     name: { en: '5th Kyu', da: '5. kyu', ja: '五級' },
-    requiredKataIds: ['kihon-kata-ichi', 'kihon-kata-ni', 'kihon-kata-san', 'kata-1', 'kata-2', 'kata-3'],
   },
   {
     level: 4,
@@ -65,7 +59,6 @@ export const kyuLevels: KyuLevel[] = [
     beltTailwindColor: 'bg-green-600',
     beltTextColor: 'text-white',
     name: { en: '4th Kyu', da: '4. kyu', ja: '四級' },
-    requiredKataIds: ['kihon-kata-ichi', 'kihon-kata-ni', 'kihon-kata-san', 'kata-1', 'kata-2', 'kata-3', 'kata-4'],
   },
   {
     level: 3,
@@ -75,7 +68,6 @@ export const kyuLevels: KyuLevel[] = [
     beltTailwindColor: 'bg-green-600',
     beltTextColor: 'text-white',
     name: { en: '3rd Kyu', da: '3. kyu', ja: '三級' },
-    requiredKataIds: ['kihon-kata-ichi', 'kihon-kata-ni', 'kihon-kata-san', 'kata-1', 'kata-2', 'kata-3', 'kata-4', 'kata-5'],
   },
   {
     level: 2,
@@ -84,7 +76,6 @@ export const kyuLevels: KyuLevel[] = [
     beltTailwindColor: 'bg-amber-800',
     beltTextColor: 'text-white',
     name: { en: '2nd Kyu', da: '2. kyu', ja: '二級' },
-    requiredKataIds: ['kihon-kata-ichi', 'kihon-kata-ni', 'kihon-kata-san', 'kata-1', 'kata-2', 'kata-3', 'kata-4', 'kata-5', 'kata-6'],
   },
   {
     level: 1,
@@ -94,7 +85,6 @@ export const kyuLevels: KyuLevel[] = [
     beltTailwindColor: 'bg-amber-800',
     beltTextColor: 'text-white',
     name: { en: '1st Kyu', da: '1. kyu', ja: '一級' },
-    requiredKataIds: ['kihon-kata-ichi', 'kihon-kata-ni', 'kihon-kata-san', 'kata-1', 'kata-2', 'kata-3', 'kata-4', 'kata-5', 'kata-6', 'kata-7'],
   },
 ];
 

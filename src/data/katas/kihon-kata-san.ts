@@ -9,7 +9,6 @@ export const kihonKataSan: Kata = {
     da: 'Grundform 3',
     ja: '基本形三',
   },
-  requiredForKyu: [8, 7, 6, 5, 4, 3, 2, 1],
   description: {
     en: 'Kihon Kata San introduces combination attacks and multiple attacker scenarios. The defender must now chain defensive and offensive techniques in fluid sequences, developing the concept of continuous motion that Ashihara calls "sabaki no nagare" — the flow of evasion.',
     da: 'Kihon Kata San introducerer kombinationsangreb og scenarier med flere angribere. Forsvareren skal nu sammenkoble defensive og offensive teknikker i flydende sekvenser og udvikle konceptet om kontinuerlig bevægelse, som Ashihara kalder "sabaki no nagare" — undvigelsens strøm.',
