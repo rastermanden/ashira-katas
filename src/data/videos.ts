@@ -3,11 +3,15 @@ import videosData from './videos.json';
 /**
  * A single YouTube video reference shown on a kata. `url` may be any YouTube
  * form (youtu.be, watch?v=, or embed) — the YouTubeEmbed component extracts
- * the video id. `label` is the caption rendered above the player.
+ * the video id. `label` is the caption rendered above the player. `steps`
+ * optionally maps a step number (as a string key) to a timestamp within this
+ * video (e.g. "1:47" or "0:14"); the step page deep-links the embed to that
+ * moment when viewing the matching step.
  */
 export interface VideoLink {
   label: string;
   url: string;
+  steps?: Record<string, string>;
 }
 
 type VideosMap = Record<string, VideoLink[]>;

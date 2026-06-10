@@ -152,7 +152,7 @@ export default async function StepPage({
                 key={link.url}
                 url={link.url}
                 label={link.label}
-                timestamp={step.videoTimestamp}
+                timestamp={link.steps?.[String(stepNum)] ?? step.videoTimestamp}
               />
             ))}
           </div>
