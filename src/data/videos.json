@@ -1,0 +1,29 @@
+{
+  "_comment": "Single source of truth for the YouTube video references shown on each kata. Edit this file to add or change videos — no code changes needed. Each key under `videos` is a kataId (must match an id in src/data/katas); its value is an array of { label, url } links. `url` may be any YouTube form (https://youtu.be/ID, https://www.youtube.com/watch?v=ID, or an embed URL) — the YouTubeEmbed component extracts the id. `label` is the caption shown above the player. Links placed in `_unassigned` are NOT rendered; they are parked here so they are not lost, waiting to be moved into the correct kata key above.",
+  "videos": {
+    "kihon-kata-ichi": [],
+    "kihon-kata-ni": [],
+    "kihon-kata-san": [],
+    "shoshinsha-kata-ichi": [],
+    "shoshinsha-kata-ni": [],
+    "shoshinsha-kata-san": [],
+    "nage-kata-ichi": [],
+    "nage-kata-ni": [],
+    "nage-kata-san": [],
+    "nage-kata-yon": [],
+    "kumite-kata-ichi": [],
+    "kumite-kata-ni": [],
+    "kumite-kata-san": [],
+    "kumite-kata-yon": [],
+    "kumite-kata-go": [],
+    "jissen-kata-ichi": [],
+    "jissen-kata-ni": []
+  },
+  "_unassigned": [
+    {
+      "label": "Reference video",
+      "url": "https://youtu.be/gR0szTP1Fp0",
+      "_note": "Kata not yet identified (YouTube is blocked by this environment's network policy, so the title could not be read). Move this object into the matching kataId array under `videos`."
+    }
+  ]
+}
