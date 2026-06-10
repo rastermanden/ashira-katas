@@ -5,6 +5,15 @@ on:
     branches:
       - main
 
+# Serialize every push to the gh-pages branch across BOTH this workflow and
+# the PR-preview workflow. A merge fires both at once (push to main + PR
+# closed), and without a shared group their concurrent pushes race — one is
+# rejected as non-fast-forward and silently lost (e.g. a dropped preview
+# cleanup). cancel-in-progress:false lets the in-flight push finish first.
+concurrency:
+  group: gh-pages-deploy
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
