@@ -18,15 +18,14 @@ function firstKyuForKata(kataId: string): number | null {
 }
 
 // Group the pensum by grade: each grade lists the katas first introduced at it,
-// so every belt is shown exactly once (no repeated swatches). kyuLevels is
-// already ordered 12 → 1; grades that introduce no new kata are omitted.
+// so every belt is shown exactly once (no repeated swatches). Every grade is
+// listed — including ones whose pensum is still a placeholder — so the full
+// belt sequence (e.g. the solid red belt) is always visible.
 function buildPensumByGrade() {
-  return kyuLevels
-    .map((kyu) => ({
-      kyu,
-      katas: allKatas.filter((kata) => firstKyuForKata(kata.id) === kyu.level),
-    }))
-    .filter((group) => group.katas.length > 0);
+  return kyuLevels.map((kyu) => ({
+    kyu,
+    katas: allKatas.filter((kata) => firstKyuForKata(kata.id) === kyu.level),
+  }));
 }
 
 
@@ -76,6 +75,9 @@ export default async function HomePage({
                 </span>
               </Link>
               <ul>
+                {katas.length === 0 && (
+                  <li className="px-4 py-3 text-xs text-gray-400 italic">—</li>
+                )}
                 {katas.map((kata) => (
                   <li key={kata.id} className="border-b border-gray-100 last:border-0">
                     <Link
