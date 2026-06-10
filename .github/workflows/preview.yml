@@ -8,7 +8,11 @@ on:
       - synchronize
       - closed
 
-concurrency: preview-${{ github.ref }}
+# Shared with deploy.yml so preview deploys/cleanups never push to gh-pages
+# at the same time as the production deploy (or each other). See deploy.yml.
+concurrency:
+  group: gh-pages-deploy
+  cancel-in-progress: false
 
 permissions:
   contents: write
