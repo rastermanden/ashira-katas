@@ -23,7 +23,7 @@ export interface Kata {
   japaneseCharacters: string;
   romaji: string;
   description: LocalizedString;
-  youtubeLinks: { label: string; url: string }[];
+  youtubeLinks: { label: string; url: string; steps?: Record<string, string> }[];
   steps: KataStep[];
 }
 

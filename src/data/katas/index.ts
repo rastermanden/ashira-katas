@@ -1,5 +1,6 @@
 import type { Kata } from '../types';
 import { getRequiredKataIds } from '../requirements';
+import { getVideosForKata } from '../videos';
 import { shoshinshaKataIchi } from './shoshinsha-kata-ichi';
 import { shoshinshaKataNi } from './shoshinsha-kata-ni';
 import { shoshinshaKataSan } from './shoshinsha-kata-san';
@@ -19,7 +20,7 @@ import { jissenKataIchi } from './jissen-kata-ichi';
 import { jissenKataNi } from './jissen-kata-ni';
 
 // All 17 katas of the Ashihara Karate København pensum, in curriculum order.
-export const allKatas: Kata[] = [
+const pensumKatas: Kata[] = [
   kihonKataIchi,
   shoshinshaKataIchi,
   shoshinshaKataNi,
@@ -38,6 +39,14 @@ export const allKatas: Kata[] = [
   kumiteKataGo,
   jissenKataNi,
 ];
+
+// Video references live in videos.json (the editable single source of truth).
+// Populate each kata's youtubeLinks from there, falling back to any links
+// defined inline on the kata itself.
+export const allKatas: Kata[] = pensumKatas.map((kata) => {
+  const videos = getVideosForKata(kata.id);
+  return videos.length > 0 ? { ...kata, youtubeLinks: videos } : kata;
+});
 
 export function getKataById(id: string): Kata | undefined {
   return allKatas.find((k) => k.id === id);
