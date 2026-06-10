@@ -28,8 +28,11 @@ export function getBeltStyle(
   if (belt.stripeColor) {
     const b = belt.beltColor;
     const s = belt.stripeColor;
+    // Two snipper sitting near the two ends of the belt (the colour tabs sit
+    // on the belt's tips, not its middle), with the base colour filling the
+    // centre and the very edges.
     return {
-      background: `linear-gradient(${direction}, ${b} 28%, ${s} 28%, ${s} 38%, ${b} 38%, ${b} 62%, ${s} 62%, ${s} 72%, ${b} 72%)`,
+      background: `linear-gradient(${direction}, ${b} 14%, ${s} 14%, ${s} 22%, ${b} 22%, ${b} 78%, ${s} 78%, ${s} 86%, ${b} 86%)`,
       border,
     };
   }
