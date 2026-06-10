@@ -2,20 +2,28 @@ import type { KyuLevel } from './types';
 
 export const kyuLevels: KyuLevel[] = [
   {
-    level: 10,
-    japaneseNumeral: '十級',
+    level: 11,
+    japaneseNumeral: '十一級',
     beltColor: '#FFFFFF',
     beltTailwindColor: 'bg-white border border-gray-300',
     beltTextColor: 'text-gray-800',
+    name: { en: '11th Kyu', da: '11. kyu', ja: '十一級' },
+  },
+  {
+    level: 10,
+    japaneseNumeral: '十級',
+    beltColor: '#DC2626',
+    beltTailwindColor: 'bg-red-600',
+    beltTextColor: 'text-white',
     name: { en: '10th Kyu', da: '10. kyu', ja: '十級' },
   },
   {
     level: 9,
     japaneseNumeral: '九級',
-    beltColor: '#FFFFFF',
+    beltColor: '#DC2626',
     stripeColor: '#3B82F6',
-    beltTailwindColor: 'bg-white border border-gray-300',
-    beltTextColor: 'text-gray-800',
+    beltTailwindColor: 'bg-red-600',
+    beltTextColor: 'text-white',
     name: { en: '9th Kyu', da: '9. kyu', ja: '九級' },
   },
   {

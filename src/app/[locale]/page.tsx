@@ -1,7 +1,6 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { kyuLevels } from '@/data/kyu';
-import { danLevels } from '@/data/dan';
 import { allKatas, getKatasForKyu } from '@/data/katas';
 import { getKyusRequiringKata } from '@/data/requirements';
 import type { Locale } from '@/data/types';
@@ -12,23 +11,21 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-// Map each kata to the kyu level where it is FIRST introduced (highest kyu number = earliest).
-function buildPensumTable() {
-  return allKatas
-    .map((kata) => {
-      const requiringKyus = getKyusRequiringKata(kata.id);
-      const firstKyu = requiringKyus.length > 0 ? Math.max(...requiringKyus) : null;
-      return { kata, firstKyu };
-    })
-    .filter(
-      (row): row is { kata: (typeof allKatas)[number]; firstKyu: number } =>
-        row.firstKyu !== null,
-    )
-    .map((row) => ({
-      ...row,
-      kyu: kyuLevels.find((k) => k.level === row.firstKyu)!,
-    }))
-    .sort((a, b) => b.firstKyu - a.firstKyu); // 10 → 9 → … → 1
+// The kyu grade where a kata is FIRST introduced (highest kyu number = earliest belt).
+function firstKyuForKata(kataId: string): number | null {
+  const requiringKyus = getKyusRequiringKata(kataId);
+  return requiringKyus.length > 0 ? Math.max(...requiringKyus) : null;
+}
+
+// Group the pensum by grade: each grade lists the katas first introduced at it,
+// so every belt is shown exactly once (no repeated swatches). Every grade is
+// listed — including ones whose pensum is still a placeholder — so the full
+// belt sequence (e.g. the solid red belt) is always visible.
+function buildPensumByGrade() {
+  return kyuLevels.map((kyu) => ({
+    kyu,
+    katas: allKatas.filter((kata) => firstKyuForKata(kata.id) === kyu.level),
+  }));
 }
 
 
@@ -43,7 +40,7 @@ export default async function HomePage({
   const t = await getTranslations('home');
   const l = locale as Locale;
 
-  const pensum = buildPensumTable();
+  const pensum = buildPensumByGrade();
 
   return (
     <div>
@@ -55,63 +52,58 @@ export default async function HomePage({
         <p className="mt-3 text-gray-500 max-w-xl mx-auto text-sm leading-relaxed">{t('tagline')}</p>
       </div>
 
-      {/* Pensum overview table */}
+      {/* Pensum overview, grouped by grade (one belt per grade) */}
       <section className="mb-12">
         <h2 className="text-xl font-bold text-gray-800 mb-4">{t('kyuOverview')}</h2>
 
-        <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="bg-stone-50 border-b border-gray-200">
-                <th className="text-left px-4 py-3 font-semibold text-gray-500 uppercase tracking-wider text-xs w-8">#</th>
-                <th className="text-left px-4 py-3 font-semibold text-gray-500 uppercase tracking-wider text-xs">{t('belt')}</th>
-                <th className="text-left px-4 py-3 font-semibold text-gray-500 uppercase tracking-wider text-xs">{t('requiredKata')}</th>
-                <th className="text-right px-4 py-3 font-semibold text-gray-500 uppercase tracking-wider text-xs hidden sm:table-cell">Steps</th>
-              </tr>
-            </thead>
-            <tbody>
-              {pensum.map(({ kata, kyu }, i) => {
-                const isComplete = kata.steps.length > 0;
-                return (
-                  <tr
-                    key={kata.id}
-                    className="border-b border-gray-100 last:border-0 hover:bg-stone-50 transition-colors"
-                  >
-                    <td className="px-4 py-3 text-gray-400 text-xs font-mono">{i + 1}</td>
-                    <td className="px-4 py-3">
-                      <Link href={`/kyu/${kyu.level}`} className="flex items-center gap-2 group">
-                        <span
-                          className="inline-block h-4 w-8 rounded-sm flex-shrink-0 shadow-sm"
-                          style={getBeltStyle(kyu)}
-                        />
-                        <span className="text-gray-600 group-hover:text-ashihara-red transition-colors whitespace-nowrap text-xs">
-                          {kyu.name[l]}
-                        </span>
-                      </Link>
-                    </td>
-                    <td className="px-4 py-3">
-                      <Link href={`/kata/${kata.id}`} className="group">
+        <div className="space-y-3">
+          {pensum.map(({ kyu, katas }) => (
+            <div
+              key={kyu.level}
+              className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden"
+            >
+              <Link
+                href={`/kyu/${kyu.level}`}
+                className="flex items-center gap-2 px-4 py-3 bg-stone-50 border-b border-gray-200 group"
+              >
+                <span
+                  className="inline-block h-4 w-8 rounded-sm flex-shrink-0 shadow-sm"
+                  style={getBeltStyle(kyu)}
+                />
+                <span className="font-semibold text-gray-700 group-hover:text-ashihara-red transition-colors text-sm">
+                  {kyu.name[l]}
+                </span>
+              </Link>
+              <ul>
+                {katas.length === 0 && (
+                  <li className="px-4 py-3 text-xs text-gray-400 italic">—</li>
+                )}
+                {katas.map((kata) => (
+                  <li key={kata.id} className="border-b border-gray-100 last:border-0">
+                    <Link
+                      href={`/kata/${kata.id}`}
+                      className="flex items-center justify-between gap-2 px-4 py-3 hover:bg-stone-50 transition-colors group"
+                    >
+                      <span className="min-w-0">
                         <span className="font-semibold text-gray-800 group-hover:text-ashihara-red transition-colors block leading-tight">
                           {kata.name[l]}
                         </span>
                         <span className="text-xs text-gray-400 italic">{kata.romaji}</span>
                         <span className="japanese-text text-xs text-gray-300 ml-2">{kata.japaneseCharacters}</span>
-                      </Link>
-                    </td>
-                    <td className="px-4 py-3 text-right hidden sm:table-cell">
-                      {isComplete ? (
-                        <span className="inline-flex items-center gap-1 text-xs text-gray-500 bg-stone-100 px-2 py-0.5 rounded-full">
+                      </span>
+                      {kata.steps.length > 0 ? (
+                        <span className="flex-shrink-0 inline-flex items-center gap-1 text-xs text-gray-500 bg-stone-100 px-2 py-0.5 rounded-full">
                           {kata.steps.length}
                         </span>
                       ) : (
-                        <span className="text-xs text-gray-300">—</span>
+                        <span className="flex-shrink-0 text-xs text-gray-300">—</span>
                       )}
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -129,7 +121,7 @@ export default async function HomePage({
               >
                 <span
                   className="flex-shrink-0 h-8 w-3 rounded-sm shadow-sm"
-                  style={getBeltStyle(kyu)}
+                  style={getBeltStyle(kyu, 'vertical')}
                 />
                 <div className="min-w-0 flex-1">
                   <p className="font-semibold text-gray-800 text-sm japanese-text">{kyu.name[l]}</p>
@@ -139,28 +131,6 @@ export default async function HomePage({
               </Link>
             );
           })}
-        </div>
-      </section>
-
-      {/* Dan level cards */}
-      <section>
-        <h2 className="text-xl font-bold text-gray-800 mb-2">Dan</h2>
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {danLevels.map((dan) => (
-            <div
-              key={dan.level}
-              className="flex items-center gap-3 bg-white rounded-xl border border-gray-200 shadow-sm px-4 py-3 overflow-hidden"
-            >
-              <span
-                className="flex-shrink-0 h-8 w-3 rounded-sm shadow-sm"
-                style={getBeltStyle(dan)}
-              />
-              <div className="min-w-0 flex-1">
-                <p className="font-semibold text-gray-800 text-sm japanese-text">{dan.name[l]}</p>
-                <p className="text-xs text-gray-400 japanese-text">{dan.japaneseNumeral}</p>
-              </div>
-            </div>
-          ))}
         </div>
       </section>
     </div>

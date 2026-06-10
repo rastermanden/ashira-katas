@@ -1,6 +1,10 @@
 {
-  "_comment": "Single source of truth for which katas each kyu grading requires. Edit this file to update the pensum. Cumulative: each kyu lists every kata required to grade at that belt, in pensum order. kataId must match an id in src/data/katas. An optional `note` (with en/da/ja text) can be added to any kata entry. Mapping follows the Ashihara Karate København pensum: the named-kata grades (6.-1. kyu) come straight from the pensum; the pre-yellow grades (10.-7. kyu) map to the basic katas the pensum schedules before yellow belt. Kumite no Kata 5 and Jissen no Kata 2 are formally 1st dan (shodan) requirements; they are listed at 1. kyu (with a note) so they remain visible until a dan-requirements model exists.",
+  "_comment": "Single source of truth for which katas each kyu grading requires. Edit this file to update the pensum. Cumulative: each kyu lists every kata required to grade at that belt, in pensum order. kataId must match an id in src/data/katas. An optional `note` (with en/da/ja text) can be added to any kata entry. Mapping follows the Ashihara Karate København pensum: the named-kata grades (6.-1. kyu) come straight from the pensum; the pre-yellow grades (11.-7. kyu) map to the basic katas the pensum schedules before yellow belt. The 11. (white) and 10. (red) kyu entries are placeholders using the first basic kata — refine them when the white/red belt pensum is confirmed. Kumite no Kata 5 and Jissen no Kata 2 are formally 1st dan (shodan) requirements; they are listed at 1. kyu (with a note) so they remain visible until a dan-requirements model exists.",
   "kyuRequirements": [
+    {
+      "kyuLevel": 11,
+      "katas": [{ "kataId": "kihon-kata-ichi" }]
+    },
     {
       "kyuLevel": 10,
       "katas": [{ "kataId": "kihon-kata-ichi" }]
