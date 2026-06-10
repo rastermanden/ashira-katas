@@ -129,7 +129,7 @@ export default async function HomePage({
               >
                 <span
                   className="flex-shrink-0 h-8 w-3 rounded-sm shadow-sm"
-                  style={getBeltStyle(kyu)}
+                  style={getBeltStyle(kyu, 'vertical')}
                 />
                 <div className="min-w-0 flex-1">
                   <p className="font-semibold text-gray-800 text-sm japanese-text">{kyu.name[l]}</p>
@@ -153,7 +153,7 @@ export default async function HomePage({
             >
               <span
                 className="flex-shrink-0 h-8 w-3 rounded-sm shadow-sm"
-                style={getBeltStyle(dan)}
+                style={getBeltStyle(dan, 'vertical')}
               />
               <div className="min-w-0 flex-1">
                 <p className="font-semibold text-gray-800 text-sm japanese-text">{dan.name[l]}</p>

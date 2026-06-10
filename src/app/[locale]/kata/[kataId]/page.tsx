@@ -4,6 +4,7 @@ import { Link } from '@/i18n/navigation';
 import { getKataById, allKatas } from '@/data/katas';
 import { kyuLevels } from '@/data/kyu';
 import { getKyusRequiringKata } from '@/data/requirements';
+import { getBeltStyle } from '@/lib/belt';
 import YouTubeEmbed from '@/components/YouTubeEmbed';
 import type { Locale } from '@/data/types';
 import { routing } from '@/i18n/routing';
@@ -119,7 +120,7 @@ export default async function KataPage({
                   href={`/kyu/${kyu.level}`}
                   className="flex items-center gap-2 group"
                 >
-                  <div className={`h-3 w-12 rounded-sm ${kyu.beltTailwindColor} flex-shrink-0`} />
+                  <div className="h-3 w-12 rounded-sm flex-shrink-0" style={getBeltStyle(kyu)} />
                   <span className="text-sm text-gray-600 group-hover:text-ashihara-red transition-colors">
                     {kyu.name[l]}
                   </span>

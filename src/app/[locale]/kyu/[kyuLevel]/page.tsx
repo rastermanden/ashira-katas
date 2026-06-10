@@ -44,7 +44,7 @@ export default async function KyuPage({
 
       {/* Header */}
       <div className="flex items-center gap-4 mb-8">
-        <div className="h-10 w-4 rounded-sm shadow-md flex-shrink-0" style={getBeltStyle(kyu)} />
+        <div className="h-10 w-4 rounded-sm shadow-md flex-shrink-0" style={getBeltStyle(kyu, 'vertical')} />
         <div>
           <h1 className="text-2xl font-bold text-gray-900 japanese-text">{kyu.name[l]}</h1>
           <p className="text-sm text-gray-500">{kyu.japaneseNumeral}</p>
